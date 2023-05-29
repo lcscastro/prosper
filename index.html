@@ -179,29 +179,35 @@
       </symbol>
     </svg>
     
-<header data-bs-theme="dark" class="d-flex flex-wrap justify-content-center py-2 mb-2 border-bottom">
-  <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark" style="height: 110px;">
-    <div class="container-fluid">
+<header data-bs-theme="light" class="d-flex flex-wrap justify-content-center py-2 mb-2 border-bottom">
+  <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-light" style="height: 110px;">
+    <div class="container-fluid" style="background-color: #fff">
       <a class="navbar-brand" href="index.html"><img class="img-fluid" width="180px" height="80%" src="img/Logo_Prosper_Site_250X150.png" > </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
+<!-- Corrigir Fundo Branco no Branco-->        <span class="navbar-toggler-icon" style="background-image: var(--bs-navbar-dark-toggler-icon-bg)"></span> 
       </button>
-      <div class="collapse navbar-collapse" id="navbarCollapse">
-        <ul class="navbar-nav me-auto mb-2 mb-md-0" >
+      <div class="collapse navbar-collapse " id="navbarCollapse">
+        <ul class="navbar-nav me-auto mb-2 mb-md-0">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#" style="font-size: 20px;">Home</a>
+            <a class="nav-link active" aria-current="page" href="#" style="font-size: 20px;color: #000">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#servico" style="font-size: 20px;">Serviços</a>
+            <a class="nav-link" href="#servico" style="font-size: 20px;color: #000">Serviços</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#telemetria" style="font-size: 20px;">Telemetria</a>
+            <a class="nav-link" href="#telemetria" style="font-size: 20px;color: #000">Telemetria</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#cliente" style="font-size: 20px;">Area do Cliente</a>
+            <a class="nav-link" href="#cliente" style="font-size: 20px;color: #000">Area do Cliente</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="contato.html" style="font-size: 20px;">Orçamento</a>
+            <a class="nav-link" href="contato.html" style="font-size: 20px;color: #000">Orçamento</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contato.html" style="font-size: 20px;color: #000">A</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contato.html" style="font-size: 20px;color: #000">B</a>
           </li>
         </ul>
       </div>
@@ -212,7 +218,7 @@
 <main>
   <div id="myCarousel" class="carousel slide" data-bs-ride="carousel" style="margin-bottom: 0px;" >
 
-    <div class="carousel-inner" style="height: 680px;">
+    <div class="carousel-inner">
       <div class="carousel-item active">
         <img class="img-fluid bd-placeholder-img-lg" width="100%" height="80%" aria-hidden="true" focusable="false"="100%" src="img/BannerPrincipal_site_prosper_1.png"/></img>
         <div class="container">
@@ -228,36 +234,36 @@
   ================================================== -->
   <!-- Wrap the rest of the page in another container to center all the content. -->
 
-  <div class="row featurette">
-    <div class="col-md-auto">
-      <h2 class="featurette-heading fw-normal lh-1">Torne o consumo Individual de água e gás <span class="text-body-secondary">mais inteligente.</span></h2>
-      <img class="img-fluid" aria-hidden="true" focusable="false"="100%" src="img/FundoAgua.jpg"/>      
+  <div class="row">
+    <div class="col-md-12">
+      <h2 id="servico" class="featurette-heading fw-normal lh-1" style="text-align: center; margin-bottom: 36px;">Torne o consumo Individual de água e gás <span style="opacity:1; color: #be1522;">mais inteligente.</span></h2>
     </div>
   </div>
-
-  <hr class="featurette-divider" id="servico">
 
   <div class="container marketing" >
 
     <!-- Three columns of text below the carousel -->
     <div class="row">
-      <div class="col-lg-3" style="text-align: center;">
+        <div class="col-lg-3" style="text-align: center;">
         <img class="" style="margin-bottom: 20px; color: #1894f2;" width="140" height="140"></i>
         <h2 class="fw-normal">Medição Individual de Água e Gás</h2>
       </div><!-- /.col-lg-4 -->
       <div class="col-lg-3" style="text-align: center;">
-        <i class="fa-solid fa-mobile fa-6x" style=" margin-top: 15px; margin-bottom: 20px; color: #be1522;"width="140" height="140"></i>
+        <i class="" style=" margin-top: 15px; margin-bottom: 20px; color: #be1522;"width="140" height="140"></i>
         <h2 class="fw-normal">Aplicativo</h2>
       </div><!-- /.col-lg-4 -->
       <div class="col-lg-3" style="text-align: center;">
-        <i class="fa-solid fa-satellite-dish fa-6x" style=" margin-top: 15px; margin-bottom: 20px; color: #1894f2;"></i>
+        <i class="" style=" margin-top: 15px; margin-bottom: 20px; color: #1894f2;"></i>
         <h2 class="fw-normal">IOT Leituras Diarias</h2>
       </div><!-- /.col-lg-4 -->
       <div class="col-lg-3" style="text-align: center;">
-        <i class="fa-solid fa-bell fa-6x" style=" margin-top: 15px; margin-bottom: 20px; color: #be1522"></i>
+        <i class="" style=" margin-top: 15px; margin-bottom: 20px; color: #be1522"></i>
         <h2 class="fw-normal">Alertas Personalizados</h2>
       </div><!-- /.col-lg-4 -->
     </div><!-- /.row -->
+    </div><!-- /.container -->
+
+    <div class="container marketing">
 
     <!-- START THE FEATURETTES -->
 
@@ -273,10 +279,11 @@
         <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="var(--bs-secondary-bg)"/><text x="50%" y="50%" fill="var(--bs-secondary-color)" dy=".3em">500x500</text></svg>
       </div>
     </div>
+    </div><!-- /.container -->
 
     <hr class="featurette-divider">
 
-    <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+    <div id="myCarousel" class="carousel slide" data-bs-ride="carousel" style="margin-bottom: 24px;">
 
       <div class="carousel-inner">
         <div class="carousel-item active">
@@ -290,9 +297,7 @@
       </div>
     </div>
 
-    <hr class="featurette-divider" id="cliente">
-
-    <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+    <div id="cliente" id="myCarousel" class="carousel slide" data-bs-ride="carousel">
 
       <div class="carousel-inner">
         <div class="carousel-item active">
@@ -310,7 +315,7 @@
 
     <!-- /END THE FEATURETTES -->
 
-  </div><!-- /.container -->
+ 
 
   <!-- FOOTER -->
   <footer class="container">
@@ -318,8 +323,9 @@
     <div class="container">
       <footer class="row row-cols-1 row-cols-md-3 py-5 my-5 border-top">
         <div class="col mb-3">
-         
-          <p class="text-body-secondary">LOGO PROSPER</p>
+          <a href="index.html"><img class="img-fluid" width="180px" height="80%" src="img/Logo_Prosper_Site_250X150.png" > </a>
+          <!-- <a>A</a>
+          <a>B</a> -->
           <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
             <li class="ms-3"><a class="text-body-secondary" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#twitter"/></svg></a></li>
             <li class="ms-3"><a class="text-body-secondary" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#instagram"/></svg></a></li>
