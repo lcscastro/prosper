@@ -3,9 +3,11 @@
 /* Padding below the footer and lighter body text */
 
 body {
+  height: 100vh;
+  box-sizing: border-box;
   padding-top: 3rem;
   /* padding-bottom: 3rem; */
-  color: rgb(var(--bs-tertiary-color-rgb));
+  /* color: rgb(var(--bs-tertiary-color-rgb)); */
 }
 
 
@@ -25,6 +27,15 @@ body {
 /* Declare heights because of positioning of img element */
 .carousel-item {
   height: a;
+}
+
+.rodape h5,ul,li,a {
+  color:white
+}
+
+.rodape p {
+  margin-bottom: 0px;
+  color:white;
 }
 
 
