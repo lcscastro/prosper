@@ -34,8 +34,19 @@ body {
 }
 
 .rodape p {
+  /* display: flex; */
   margin-bottom: 0px;
   color:white;
+  /* justify-content: right; */
+}
+
+.logo-rodape{
+  margin-left: 5%;
+}
+
+.texto-rodape {
+  margin-top: 2%;
+  margin-bottom: 0px;
 }
 
 
