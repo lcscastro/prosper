@@ -2,7 +2,10 @@
 -------------------------------------------------- */
 /* Padding below the footer and lighter body text */
 
+  @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+
 body {
+  font-family: 'Montserrat', sans-serif;
   height: 100vh;
   box-sizing: border-box;
   padding-top: 3rem;
@@ -29,11 +32,7 @@ body {
   height: a;
 }
 
-.rodape h5,ul,li,a {
-  color:white
-}
-
-.rodape p {
+.rodape-texto {
   /* display: flex; */
   margin-bottom: 0px;
   color:white;
@@ -47,6 +46,12 @@ body {
 .texto-rodape {
   margin-top: 2%;
   margin-bottom: 0px;
+}
+
+.rodape-icone{
+  color:white;
+  padding: 0px;
+  padding-right: 10px;
 }
 
 

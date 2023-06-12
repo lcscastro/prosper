@@ -13,7 +13,7 @@
     <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-brands/css/uicons-brands.css'>
     <link href="normalizze.css" rel="stylesheet">
     <link href="pricing.css" rel="stylesheet">
-
+    <link href="carousel.css" rel="stylesheet">
     <style>
       .bd-placeholder-img {
         font-size: 1.125rem;
@@ -100,16 +100,16 @@
       <div style="margin-left: 12rem;" class="collapse navbar-collapse" id="navbarCollapse">
         <ul class="navbar-nav me-auto mb-2 mb-md-0">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#" style="font-size: 20px;color: #000">Home</a>
+            <a class="nav-link active" aria-current="page" href="index.html" style="font-size: 20px;color: #000">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#servico" style="font-size: 20px;color: #000">Serviços</a>
+            <a class="nav-link" href="index.html#servico" style="font-size: 20px;color: #000">Serviços</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#telemetria" style="font-size: 20px;color: #000">Telemetria</a>
+            <a class="nav-link" href="index.html#telemetria" style="font-size: 20px;color: #000">Telemetria</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#cliente" style="font-size: 20px;color: #000">Area do Cliente</a>
+            <a class="nav-link" href="index.html#cliente" style="font-size: 20px;color: #000">Area do Cliente</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="contato.html" style="font-size: 20px;color: #000">Orçamento</a>
@@ -164,7 +164,7 @@
               <li>Notifique ocorrencias</li>
               <li>Solicite Reparos</li>
             </ul>
-            <a href="https://cliente.prosperservice.com.br/Login?p=sindico"><button type="button" class="w-100 btn btn-lg btn-primary">Acessar</button></a>
+            <a href="https://cliente.prosperservice.com.br/Login?p=sindico"><button style="background-color: #242468;" type="button" class="w-100 btn btn-lg btn-primary">Acessar</button></a>
           </div>
         </div>
       </div>
@@ -177,29 +177,33 @@
       <footer class="rodape row row-cols-2 row-cols-md-3 py-2 my-2 border-top">
         <div class="col mb-8 logo-rodape">
           <a href="index.html"><img class="img-fluid" height="80%" src="img/Logo_Prosper_Branco_Site_250X150.png" > </a>
-          <ul class="nav col-md-4 justify-content-center list-unstyled d-flex"> 
-            <li class="ms-3"><a class="text-body-secondary" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#twitter"/></svg></a></li>
-            <li class="ms-3"><a class="text-body-secondary" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#instagram"/></svg></a></li>
+          <ul class="nav col-md-4 justify-content-start list-unstyled d-flex"> 
+            <li class="ms-1">
+              <a class="nav-link rodape-icone" href=""><i class="fi fi-brands-instagram" style="line-height: 2.2;"></i></a>
+            </li>
+            <li class="ms-1">
+              <a class="nav-link rodape-icone" href=""><i class="fi fi-brands-linkedin" style="line-height: 2.2;"></i></a>
+            </li>
           </ul>
         </div>
 
     
         <div class="col mb-5 texto-rodape">
-          <h5 style="color:white;">Fale conosco</h5>
+          <h5 class="rodape-texto">Fale conosco</h5>
           <ul class="nav flex-column">
-            <li class="nav-item mb-1"><a class="nav-link p-0" style="color:white;">Rua Cavour, 81</a></li>
-            <li class="nav-item mb-1"><a class="nav-link p-0" style="color:white;">Vila Prudente - São Paulo/SP</a></li>
-            <li class="nav-item mb-1"><a class="nav-link p-0" style="color:white;">Tel: +55 11 3214-3232</a></li>
-            <li class="nav-item mb-1"><a class="nav-link p-0" style="color:white;">Horário de atendimento - Segunda à sexta 09hr às 17h30</a></li>
+            <li class="nav-item mb-1"><a class="nav-link p-0 rodape-texto">Rua Cavour, 81</a></li>
+            <li class="nav-item mb-1"><a class="nav-link p-0 rodape-texto">Vila Prudente - São Paulo/SP</a></li>
+            <li class="nav-item mb-1"><a class="nav-link p-0 rodape-texto">Tel: +55 11 3214-3232</a></li>
+            <li class="nav-item mb-1"><a class="nav-link p-0 rodape-texto">Horário de atendimento - Segunda à sexta 09hr às 17h30</a></li>
           </ul>
         </div>
        
       </footer>
 
-    <p class="rodape float-end"><a href="#">Voltar ao Topo </a></p>
-    <p class="rodape" style="color:white;">&copy; PROSPER 2023 | PROSPER SP MEDIÇÃO DE AGUA E GÁS LTDA &middot; 
-    <a href="#">Privacidade</a> &middot; <a href="#">Termos de Uso</a></p>
-    </div>
+      <p class="rodape-texto float-end"><a href="#">Voltar ao Topo </a></p>
+      <p class="rodape-texto" style="color:white;">&copy; PROSPER 2023 | PROSPER SP MEDIÇÃO DE AGUA E GÁS LTDA &middot; 
+      <a href="#">Privacidade</a> &middot; <a href="#">Termos de Uso</a></p>
+      </div>
 
   </main>
   <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
