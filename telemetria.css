@@ -59,11 +59,15 @@
  * Extra utilities
  */
 
-.flex-equal > * {
-  flex: 1;
+.telemetria-img{
+  display: flex;
+  justify-content: space-evenly;
 }
+
 @media (min-width: 768px) {
   .flex-md-equal > * {
     flex: 1;
   }
 }
+
+
