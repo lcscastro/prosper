@@ -85,82 +85,8 @@
         z-index: 1500;
       }
     </style>
-    
-    <!-- Custom styles for this template -->
     <link href="carousel.css" rel="stylesheet">
-    <style>
-      .bd-placeholder-img {
-        font-size: 1.125rem;
-        text-anchor: middle;
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        user-select: none;
-      }
-
-      @media (min-width: 768px) {
-        .bd-placeholder-img-lg {
-          font-size: 3.5rem;
-        }
-      }
-
-      .b-example-divider {
-        width: 100%;
-        height: 3rem;
-        background-color: rgba(0, 0, 0, .1);
-        border: solid rgba(0, 0, 0, .15);
-        border-width: 1px 0;
-        box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
-      }
-
-      .b-example-vr {
-        flex-shrink: 0;
-        width: 1.5rem;
-        height: 100vh;
-      }
-
-      .bi {
-        vertical-align: -.125em;
-        fill: currentColor;
-      }
-
-      .nav-scroller {
-        position: relative;
-        z-index: 2;
-        height: 2.75rem;
-        overflow-y: hidden;
-      }
-
-      .nav-scroller .nav {
-        display: flex;
-        flex-wrap: nowrap;
-        padding-bottom: 1rem;
-        margin-top: -1px;
-        overflow-x: auto;
-        text-align: center;
-        white-space: nowrap;
-        -webkit-overflow-scrolling: touch;
-      }
-
-      .btn-bd-primary {
-        --bd-violet-bg: #712cf9;
-        --bd-violet-rgb: 112.520718, 44.062154, 249.437846;
-
-        --bs-btn-font-weight: 600;
-        --bs-btn-color: var(--bs-white);
-        --bs-btn-bg: var(--bd-violet-bg);
-        --bs-btn-border-color: var(--bd-violet-bg);
-        --bs-btn-hover-color: var(--bs-white);
-        --bs-btn-hover-bg: #6528e0;
-        --bs-btn-hover-border-color: #6528e0;
-        --bs-btn-focus-shadow-rgb: var(--bd-violet-rgb);
-        --bs-btn-active-color: var(--bs-btn-hover-color);
-        --bs-btn-active-bg: #5a23c8;
-        --bs-btn-active-border-color: #5a23c8;
-      }
-      .bd-mode-toggle {
-        z-index: 1500;
-      }
-    </style>
+    
   </head>
   <body>    
 <header data-bs-theme="light" class="d-flex flex-wrap justify-content-center py-2 mb-2 border-bottom">
@@ -204,12 +130,9 @@
 
     <div class="carousel-inner">
       <div class="carousel-item active">
+        <a class="btn btn-primary btn-lg btn-painel-principal" href="contato.html">Saiba Mais</a>
         <img class="img-fluid bd-placeholder-img-lg" width="100%" height="80%" aria-hidden="true" focusable="false"="100%" src="img/BannerPrincipal_site_prosper_1.png"/></img>
-        <div class="container">
-          <div class="carousel-caption text-start" style="text-align: right!important; right: 20%;bottom: 0px;">
-            <p><a class="btn btn-primary btn-lg" style="font-size: 25px; width: 160px;" href="contato.html">Saiba Mais</a></p>
-          </div>
-        </div>
+        
       </div> 
     </div>
   </div>
@@ -255,17 +178,18 @@
 
     <div class="row featurette">
       <div class="col-md-7 order-md-2">
-        <h2 class="featurette-heading fw-normal lh-1" >Conheça nossa tecnologia de <a href="telemetria.html" class="text-body-secondary"> Telemetria. </a> </h2>
+        <h2 class="featurette-heading fw-normal lh-1" >Conheça nossa tecnologia de Telemetria.</h2>
         <p class="lead">A internet das coisas vem democratizando e abrindo portas para novas tecnologias, nós da Prosper sempre realizamos P&D para melhorar o futuro do mercado de individualização de água e gás.
           A Telemetria é uma tecnologia de medição de dados de forma remota para uma central de monitoramento, que os envia posteriormente a uma central de informação.</p>
+        <p><a class="btn btn-primary btn-lg btn-painel-telemetria" style="font-size: 20px;" href="telemetria.html">Saiba Mais</a></p>
         </div>
       <div class="col-md-5 order-md-1">
-        <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="var(--bs-secondary-bg)"/><text x="50%" y="50%" fill="var(--bs-secondary-color)" dy=".3em">500x500</text></svg>
+        <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" src="img/banner_telemetria_tela_principal.png" style="margin-bottom: 20px; color: #1894f2;"  width="500" height="500"></i>
       </div>
     </div>
     </div><!-- /.container -->
 
-    <hr class="featurette-divider">
+    <!-- <hr class="featurette-divider"> -->
 
     <div id="myCarousel" class="carousel slide" data-bs-ride="carousel" style="margin-bottom: 24px;">
 
@@ -285,12 +209,8 @@
 
       <div class="carousel-inner">
         <div class="carousel-item active">
+          <p><a class="btn btn-lg btn-primary btn-painel-cliente" href="cliente.html">Saiba Mais</a></p>
           <img class="bd-placeholder-img img-fluid" width="100%" height="100%" aria-hidden="true" focusable="false"="100%" height="100%" src="img/BannerPrincipal_site_prosper_3.png"/></img>
-          <div class="container">
-            <div class="carousel-caption text-start">
-              <p><a class="btn btn-lg btn-primary" href="cliente.html">Saiba Mais</a></p>
-            </div>
-          </div>
         </div> 
       </div>
     </div>

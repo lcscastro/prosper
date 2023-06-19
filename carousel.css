@@ -86,6 +86,45 @@ body {
 
 /* rtl:end:remove */
 
+.btn-painel-principal{
+  font-size: 25px;
+  background: linear-gradient(to right, #25246b 50%,#981526 100%);
+  border-color: white;
+  position: relative;
+  top: 625px;
+  left: 925px;
+
+  
+}
+
+.btn-painel-principal:hover{
+  border-color: grey;
+}
+
+.btn-painel-telemetria{
+  font-size: 25px;
+  background: linear-gradient(to right, #25246b 50%,#981526 100%);
+  border-color: white;
+}
+
+.btn-painel-telemetria:hover{
+  border-color: grey;
+}
+
+.btn-painel-cliente{
+  font-size: 25px;
+  background: linear-gradient(to right, #25246b 50%,#981526 100%);
+  border-color: white;
+  position: relative;
+  top: 365px;
+  left: 585px;
+}
+
+.btn-painel-cliente:hover{
+  border-color: grey;
+}
+
+
 /* RESPONSIVE CSS
 -------------------------------------------------- */
 
