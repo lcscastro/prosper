@@ -124,6 +124,22 @@ body {
   border-color: grey;
 }
 
+.btn-lojaGoogle{
+  width: 180px;
+  position: relative;
+  left: 62%;
+  /* top: 35% */
+  bottom: 663px;
+  /* bottom: 75vh; */
+}
+
+.btn-lojaApple{
+  width: 190px;
+  position: relative;
+  left: 62%;
+  bottom: 75vh;
+}
+
 
 /* RESPONSIVE CSS
 -------------------------------------------------- */
