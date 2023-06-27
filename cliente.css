@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+
+body {
+  background-image: url(./img/PAG_AREA_DOCLIENTE_final.png);
+  font-family: 'Montserrat', sans-serif;
+}
+
+
+
+.container{
+  margin-top: 10%;
+  margin-left: 70%;
+  margin-right: 0;
+}
+
+.row{
+ padding: 10px; 
+}
+
+.btn-cliente{
+  height: 63px;
+  width: 204px;
+
+}
+
+.btn-cliente:hover{
+  background-color: #be1522;
+}
+
+.pricing-header {
+  margin-top: 5%;
+  max-width: 700px;
+}
+
+.div-cliente{
+  justify-content: center;
+}
+
+h1,h2{
+  color: #be1522;
+}
