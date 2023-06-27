@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+
+body{
+  font-family: 'Montserrat', sans-serif;
+}
+
+.container {
+  max-width: 960px;
+}
+
+.titulo-h2{
+  padding-top: 50px;
+}
+
+.btn-msg{
+  margin: 10px;
+  padding: 5px;
+}
+
+.rodape-texto {
+  /* display: flex; */
+  margin-bottom: 0px;
+  color:white;
+  /* justify-content: right; */
+}
+
+.logo-rodape{
+  margin-left: 5%;
+}
+
+.texto-rodape {
+  margin-top: 2%;
+  margin-bottom: 0px;
+}
+
+.rodape-icone{
+  color:white;
+  padding: 0px;
+  padding-right: 10px;
+}
