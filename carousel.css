@@ -129,7 +129,7 @@ body {
   position: relative;
   left: 62%;
   /* top: 35% */
-  bottom: 663px;
+  bottom: 75vh;
   /* bottom: 75vh; */
 }
 
@@ -139,6 +139,23 @@ body {
   left: 62%;
   bottom: 75vh;
 }
+
+/* @media (min-width: 1440){
+  .btn-lojaGoogle{
+  bottom: 663px;
+  }
+  .btn-lojaApple{
+    bottom: 444px;
+  }
+}
+
+@media (min-width: 1450){
+  .btn-lojaGoogle,.btn-lojaApple{
+  bottom: 663px;
+  }
+} */
+
+
 
 
 /* RESPONSIVE CSS
