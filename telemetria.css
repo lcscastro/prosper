@@ -59,22 +59,18 @@
  * Extra utilities
  */
 
-.telemetria-img{
+.telemetria-espaco{
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
+  
 }
-
-@media (min-width: 768px) {
-  .flex-md-equal > * {
-    /* flex: 1; */
-  }
+@media only screen and (max-width: 1440px) {
+.telemetria-img{
+    max-width:380px;
+    max-height:240px;
+    width: auto;
+    height: auto;
 }
-
-@media (min-width: 768px) {
-  .flex-md-equal > * {
-    /* flex: 1; */
-    /*teste*/
-  }
 }
 
 

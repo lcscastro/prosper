@@ -101,7 +101,7 @@
           <div style="margin-left: 12rem;" class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav me-auto mb-2 mb-md-0">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#" style="font-size: 20px;color: #000">Home</a>
+                <a class="nav-link active" aria-current="page" href="index.html" style="font-size: 20px;color: #000">Home</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#servico" style="font-size: 20px;color: #000">Serviços</a>
@@ -128,27 +128,27 @@
     </header>
 
 <main>
-  <div class="position-relative overflow-hidden text-center" style="height: 600px;" >
-    <!-- <img class="bd-placeholder-img img-fluid" src="img/telemetria_Página_4.png"> -->
+  <!-- VIDEO -->
+  <div class="position-relative overflow-hidden text-center" style="height: 600px;">
     <video class="img-fluid" autoplay muted loop>
       <source type="video/mp4" src="./img/VideoTelemetriaReduzido.mp4">
     </video>
-      <!-- <a class="btn btn-outline-secondary" href="#">Saiba Mais</a> -->
   </div>
-
-  <div class="d-md-flex flex-md-equal w-100 my-md-3 ps-md-3 telemetria-img">
-    <img class="img-fluid" src="img/Telemetria1.jpeg">
-    <img class="img-fluid" src="img/Telemetria2.jpeg">
-    <img class="img-fluid" src="img/Telemetria3.jpeg">
-    <img class="img-fluid" src="img/Telemetria4.jpeg">
+  <!-- KIT IMG -->
+  <div class="container telemetria-espaco">
+    <img class="img-fluid telemetria-img" src="img/Telemetria1.jpeg">
+    <img class="img-fluid telemetria-img" src="img/Telemetria2.jpeg">
+    <img class="img-fluid telemetria-img" src="img/Telemetria3.jpeg">
+    <img class="img-fluid telemetria-img" src="img/Telemetria4.jpeg">
   </div>
-
+  <!-- INFOGRAFICO -->
+    <!-- Texto -->
   <div class="row">
     <div class="col-md-12">
       <h2 id="servico" class="featurette-heading fw-normal lh-1" style="text-align: center; margin-bottom: 36px;">Entenda nossa tecnologia de <br><span style="opacity:1; color: #be1522;">telemetria.</span></h2><br></h2>
     </div>
   </div>
-
+    <!-- IMG -->
   <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
     <div class="carousel-inner">
       <div class="carousel-item active">
@@ -156,14 +156,14 @@
       </div> 
     </div>
   </div>
+  <!-- /INFOGRAFICO -->
 
-</main>
   <!-- FOOTER -->
-  <div class="container-fluid" style="background: linear-gradient(to right, #25246b 50%,#981526 100%);">
-    <footer class="rodape row row-cols-2 row-cols-md-3 py-2 my-2 border-top">
-      <div class="col mb-8 logo-rodape">
+ <div class="container-fluid rodape-fundo">
+    <footer class="rodape row py-2 my-2 border-top">
+      <div class="col mb-4 logo-rodape">
         <a href="index.html"><img class="img-fluid" height="80%" src="img/Logo_Prosper_Branco_Site_250X150.png" > </a>
-        <ul class="nav col-md-4 justify-content-start list-unstyled d-flex"> 
+        <ul class="nav col-md-6 justify-content-start list-unstyled d-flex"> 
           <li class="ms-1">
             <a class="nav-link rodape-icone" href=""><i class="fi fi-brands-instagram" style="line-height: 2.2;"></i></a>
           </li>
@@ -173,7 +173,6 @@
         </ul>
       </div>
 
-  
       <div class="col mb-5 texto-rodape">
         <h5 class="rodape-texto">Fale conosco</h5>
         <ul class="nav flex-column">
@@ -183,16 +182,13 @@
           <li class="nav-item mb-1"><a class="nav-link p-0 rodape-texto">Horário de atendimento - Segunda à sexta 09hr às 17h30</a></li>
         </ul>
       </div>
-     
+    
+      <p class="float-start rodape-texto">&copy; PROSPER 2023 | PROSPER SP MEDIÇÃO DE AGUA E GÁS LTDA
+      <a class="float-end rodape-texto" href="#">Voltar ao Topo </a></p>
     </footer>
-    <p class="rodape-texto float-end"><a href="#">Voltar ao Topo </a></p>
-    <p class="rodape-texto" style="color:white;">&copy; PROSPER 2023 | PROSPER SP MEDIÇÃO DE AGUA E GÁS LTDA &middot; 
-    <a href="#">Privacidade</a> &middot; <a href="#">Termos de Uso</a></p>
-    </div>
-
   
+  </div>
+</main>
     <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
-
-      
   </body>
 </html>
