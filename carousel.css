@@ -93,7 +93,6 @@ body {
   position: relative;
   top: 625px;
   left: 925px;
-
   
 }
 
@@ -140,23 +139,14 @@ body {
   bottom: 75vh;
 }
 
-/* @media (min-width: 1440){
-  .btn-lojaGoogle{
-  bottom: 663px;
-  }
-  .btn-lojaApple{
-    bottom: 444px;
-  }
+.rodape-fundo{
+  background: linear-gradient(to right, #25246b 50%,#981526 100%);
 }
 
-@media (min-width: 1450){
-  .btn-lojaGoogle,.btn-lojaApple{
-  bottom: 663px;
-  }
-} */
-
-
-
+.rodape-texto{
+  color:white;
+  text-decoration: none;
+}
 
 /* RESPONSIVE CSS
 -------------------------------------------------- */
@@ -176,6 +166,29 @@ body {
 
 @media (min-width: 62em) {
   .featurette-heading {
-    margin-top: 4rem;
+    /* margin-top: 4rem; */
+  }
+}
+
+
+/*Formato Monitor*/
+@media (min-width: 1440px){
+
+  .featurette-heading {
+    margin-top: 2rem;
+}
+
+  .btn-painel-principal{
+    position: relative;
+    /* top: 725px; */
+    top: 725px;
+    left: 975px;
+    
+  }
+  .btn-lojaGoogle{
+  bottom: 663px;
+  }
+  .btn-lojaApple{
+    bottom: 663px;
   }
 }
