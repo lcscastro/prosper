@@ -64,7 +64,7 @@
   justify-content: center;
   
 }
-@media only screen and (max-width: 1440px) {
+@media only screen and (max-width: 1440px) and (min-width:1110px) {
 .telemetria-img{
     max-width:380px;
     max-height:240px;
@@ -73,4 +73,12 @@
 }
 }
 
+@media only screen and (max-width: 1024px) and (min-width:770px){
+  .telemetria-img{
+    max-width:270px;
+    max-height:290px;
+    width: auto;
+    height: auto;
+}
+}
 

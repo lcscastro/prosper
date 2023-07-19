@@ -1,11 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
 
 body {
-  background-image: url(./img/PAG_AREA_DOCLIENTE_final.png);
   font-family: 'Montserrat', sans-serif;
 }
-
-
 
 .container{
   margin-top: 10%;
@@ -38,4 +35,17 @@ body {
 
 h1,h2{
   color: #be1522;
+}
+
+.caixa-cliente{
+  margin-bottom: 650px;
+  margin-top: 450px;
+}
+
+
+
+@media only screen and (max-width: 1440px) and (min-width:1060px){
+  .botao-cliente{
+    margin-left: 125px;
+  }
 }
