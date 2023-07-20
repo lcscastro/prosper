@@ -128,22 +128,27 @@
 
   <main>
 
-    <div class="caixa-cliente container">
-      <div class="row">
-        <div class="botao-cliente col align-items-start">
-          <a href="https://cliente.prosperservice.com.br/Login"><button type="button" class="btn btn-lg btn-outline-primary btn-cliente">Área do Morador</button></a>
-        </div>
-      </div>
-      <div class="row">
-        <div class="botao-cliente col align-items-start">
-          <a href="https://cliente.prosperservice.com.br/Login?p=sindico"><button type="button" class="btn btn-lg btn-outline-primary btn-cliente">Área do Sindico</button></a>
-        </div>
-      </div>
-    </div>
+    <section class="caixa-cliente"> 
+      <div class="row flex-start"> 
+          <div class="col-md-8"> <!-- col-md-8 -->
+            <img class="img-cliente" src="./img/PAG_AREA_DOCLIENTE_final.png">
+          </div> 
+
+          <div class="area-cliente col-md-4">
+            <div class="espaco-cliente-linha row">
+              <a href="https://cliente.prosperservice.com.br/Login"><button type="button" class="btn btn-lg btn-outline-primary btn-cliente">Área do Morador</button></a>
+            </div>
+            <div class="row">
+              <a href="https://cliente.prosperservice.com.br/Login?p=sindico"><button type="button" class="btn btn-lg btn-outline-primary btn-cliente">Área do Sindico</button></a>
+            </div>
+          </div>
+      </div>  
+    
+    </section> 
 
     <!-- FOOTER -->
     <div class="container-fluid rodape-fundo">
-      <footer class="rodape row py-2 my-2 border-top">
+      <footer class="rodape row" style="padding: 0 0 0 0; margin: 0 0 0 0;">
         <div class="col mb-4 logo-rodape">
           <a href="index.html"><img class="img-fluid" height="80%" src="img/Logo_Prosper_Branco_Site_250X150.png" > </a>
           <ul class="nav col-md-6 justify-content-start list-unstyled d-flex"> 
@@ -174,8 +179,6 @@
      <!-- <p class="float"><a class="rodape-texto" href="#">Privacidade</a> &middot; <a class="rodape-texto" href="#">Termos de Uso</a></p> --> 
     </div>
   </main>
-
-<!-- Arrumar Footer -->
 
   <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
 

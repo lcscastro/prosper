@@ -4,25 +4,7 @@ body {
   font-family: 'Montserrat', sans-serif;
 }
 
-.container{
-  margin-top: 10%;
-  margin-left: 70%;
-  margin-right: 0;
-}
 
-.row{
- padding: 10px; 
-}
-
-.btn-cliente{
-  height: 63px;
-  width: 204px;
-
-}
-
-.btn-cliente:hover{
-  background-color: #be1522;
-}
 
 .pricing-header {
   margin-top: 5%;
@@ -38,10 +20,37 @@ h1,h2{
 }
 
 .caixa-cliente{
-  margin-bottom: 650px;
-  margin-top: 450px;
+  div{
+    padding: 0 0 0 0;
+  }
 }
 
+.area-cliente {
+  margin-top: 20%;
+}
+
+
+
+.espaco-cliente-linha{
+  display: flex;
+  text-decoration: none;
+  margin-bottom: 10px;
+}
+
+.btn-cliente{
+  height: 63px;
+  width: 320px;
+  font-size: xx-large;
+}
+
+.btn-cliente:hover{
+  background-color: #be1522;
+}
+
+.img-cliente{
+  max-width: 100%;
+  height: auto;
+}
 
 
 @media only screen and (max-width: 1440px) and (min-width:1060px){
