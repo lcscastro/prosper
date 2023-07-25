@@ -58,3 +58,11 @@ h1,h2{
     margin-left: 125px;
   }
 }
+
+@media only screen and (max-width: 1024px){
+  .btn-cliente{
+    font-size: x-large;
+    height: 50px;
+    width: 280px;
+  }
+}
