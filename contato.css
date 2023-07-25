@@ -2,7 +2,6 @@
 
 body{
   font-family: 'Montserrat', sans-serif;
-  background-image: url(./img/banner_pag_orcamento.png);
 }
 
 .container {
@@ -10,32 +9,24 @@ body{
 }
 
 .titulo-h2{
-  padding-top: 50px;
+  padding-top: 20px;
 }
 
 .btn-msg{
-  margin: 10px;
   padding: 5px;
+  width: 250px;
+  
 }
 
-.rodape-texto {
-  /* display: flex; */
-  margin-bottom: 0px;
-  color:white;
-  /* justify-content: right; */
+.area-form{
+  margin-top: 50px;
+  display: flex;
+  flex-direction: row;
+  
 }
-
-.logo-rodape{
-  margin-left: 5%;
+@media only screen and (max-width: 1024px) and (min-width:770px){
+.img-contato{
+  max-width: 100%;
+  height: auto;
 }
-
-.texto-rodape {
-  margin-top: 2%;
-  margin-bottom: 0px;
-}
-
-.rodape-icone{
-  color:white;
-  padding: 0px;
-  padding-right: 10px;
 }

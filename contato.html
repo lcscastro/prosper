@@ -14,7 +14,6 @@
     <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css'>
     <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-brands/css/uicons-brands.css'>
     <link href="normalizze.css" rel="stylesheet">
-    <link href="carousel.css" rel="stylesheet">
     <link rel="preconnect" href="https://www.google.com">
     <link rel="preconnect" href="https://www.gstatic.com" crossorigin>
     <style>
@@ -92,26 +91,27 @@
     </style>    
     <!-- Custom styles for this template -->
     <link href="contato.css" rel="stylesheet">
+    <link href="carousel.css" rel="stylesheet">
   </head>
   <body class="bg-body-tertiary">
    
     <header data-bs-theme="light" class="d-flex flex-wrap justify-content-center py-2 mb-2 border-bottom">
-      <nav class="navbar navbar-expand-md navbar-light fixed-top bg-light">
+      <nav class="navbar navbar-expand-md navbar-light fixed-top bg-light" style="padding-bottom: 0px;">
         <div class="container-fluid" style="background-color: #fff">
           <a style="margin-left: 5rem"; class="navbar-brand" href="index.html"><img class="img-fluid" width="180px" height="80%" src="img/Logo_Prosper_Site_250X150.png" alt="LogoTipo da Empresa"> </a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
            <span class="navbar-toggler-icon"></span> 
           </button>
-          <div style="margin-left: 12rem;" class="collapse navbar-collapse" id="navbarCollapse">
+          <div class="menu-header collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav me-auto mb-2 mb-md-0">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#" style="font-size: 20px;color: #000">Home</a>
+                <a class="nav-link active" aria-current="page" href="index.html" style="font-size: 20px;color: #000">Home</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#servico" style="font-size: 20px;color: #000">Serviços</a>
+                <a class="nav-link" href="index.html#servico" style="font-size: 20px;color: #000">Serviços</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#telemetria" style="font-size: 20px;color: #000">Telemetria</a>
+                <a class="nav-link" href="index.html#telemetria" style="font-size: 20px;color: #000">Telemetria</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="cliente.html" style="font-size: 20px;color: #000">Área do Cliente</a>
@@ -131,19 +131,20 @@
       </nav>
     </header>
 
-<div class="container">
   <main>
-    <div class="py-5">
-      <h2 class="titulo-h2">Seja um cliente <span>Pros</span><span>per</span></h2>
-      <!-- <p class="lead">Below is an example form built entirely with Bootstrap’s form controls. Each required form group has a validation state that can be triggered by attempting to submit the form without completing it.</p> -->
-    </div>
 
-      <div class="col-md-7 col-lg-8">
-        <!-- <h4 class="mb-3">Billing address</h4> -->
+    <div class="row area-form">
+      
+      <div class="col-md-6"> <!--col-md-8 -->
+       <img class="img-contato img-fluid" src="./img/banner_pag_orcamento.png">
+     </div>
+
+      <div class="col-md-4 col-lg-6">
+        <h2 class="titulo-h2">Seja um cliente <span>Pros</span><span>per</span></h2>
         <form class="needs-validation" novalidate>
           <div class="row g-3">
             
-            <div class="col-sm-12">
+            <div class="col-sm-8">
               <label for="nome" class="form-label">Seu Nome</label>
               <input type="text" class="form-control" id="nome" placeholder="" value="" required>
               <div class="invalid-feedback">
@@ -151,7 +152,7 @@
               </div>
             </div>
 
-            <div class="col-sm-12">
+            <div class="col-sm-8">
               <label for="contato" class="form-label">Telefone para Contato</label>
               <input type="text" class="form-control" id="contato" placeholder="" value="" required>
               <div class="invalid-feedback">
@@ -159,7 +160,7 @@
               </div>
             </div>
 
-            <div class="col-12">
+            <div class="col-sm-8">
               <!-- <span class="text-body-secondary">(Optional)</span> -->
               <label for="email" class="form-label">Email</label>
               <input type="email" class="form-control" id="email" placeholder="voce@exemplo.com">
@@ -168,7 +169,7 @@
               </div>
             </div>
 
-            <div class="col-12">
+            <div class="col-sm-8">
               <label for="endereco" class="form-label">Endereço</label>
               <input type="text" class="form-control" id="endereco" placeholder="" required>
               <div class="invalid-feedback">
@@ -176,22 +177,22 @@
               </div>
             </div>
 
-            <div class="col-12">
+            <div class="col-sm-8">
               <label for="condominio" class="form-label">Nome do condominio</label>
               <input type="text" class="form-control" id="condominio" placeholder="">
             </div>
 
-            <div class="col-12">
+            <div class="col-sm-8">
               <label for="administradora" class="form-label">Nome do administradora</label>
               <input type="text" class="form-control" id="administradora" placeholder="">
             </div>
 
-            <div class="col-md-5">
+            <div class="col-sm-5">
               <label for="Cidade" class="form-label">Cidade</label>
               <input type="text" class="form-control" id="Cidade" placeholder="">
             </div>
 
-            <div class="col-md-4">
+            <div class="col-sm-3">
               <label for="estado" class="form-label">Estado</label>
               <select class="form-select" id="estado" required>
                 <option value="">Selecione...</option>
@@ -229,7 +230,7 @@
               </div>
             </div>
 
-            <div class="col-md-3">
+            <div class="col-3">
               <label for="cep" class="form-label">CEP</label>
               <input type="text" class="form-control" id="cep" placeholder="" required>
               <div class="invalid-feedback">
@@ -238,7 +239,7 @@
             </div>
           </div>
 
-          <div class="col-md-4">
+          <div class="col-sm-3">
             <label for="perfil" class="form-label">Perfil</label>
             <select class="form-select" id="perfil" required>
               <option value="">Selecione o perfil...</option>
@@ -251,61 +252,45 @@
             </div>
           </div>
 
-          <div class="mb-3">
+          <div class="mb-sm-2">
             <label for="exampleFormControlTextarea1" class="form-label">Sua Mensagem</label>
-            <textarea class="form-control" id="exampleFormControlTextarea1" rows="4"></textarea>
+            <textarea class="form-control" id="exampleFormControlTextarea1" rows="4" style="width: 650px;"></textarea>
           </div>
 
-          <hr class="my-4">
-
-          <!-- <div class="form-check">
-            <input type="checkbox" class="form-check-input" id="same-address">
-            <label class="form-check-label" for="same-address">Aceito e Concordo com os termos de uso</label>
-          </div>        
-
-          <hr class="my-4"> -->
-
-          <button class="w-100 btn btn-primary btn-lg btn-msg" type="submit">Enviar Mensagem</button>
+          <button class="btn btn-primary btn-lg btn-msg" type="submit">Enviar Mensagem</button>
         </form>
       </div>
     </div>
-  </main>
-
-<div class="container-fluid" style="background: linear-gradient(to right, #25246b 50%,#981526 100%);">
-  <footer class="rodape row row-cols-2 row-cols-md-3 py-2 my-2 border-top">
-    <div class="col mb-8 logo-rodape">
-      <a href="index.html"><img class="img-fluid" height="80%" src="img/Logo_Prosper_Branco_Site_250X150.png" > </a>
-      <ul class="nav col-md-4 justify-content-start list-unstyled d-flex"> 
-        <li class="ms-1">
-          <a class="nav-link rodape-icone" href=""><i class="fi fi-brands-instagram" style="line-height: 2.2;"></i></a>
-        </li>
-        <li class="ms-1">
-          <a class="nav-link rodape-icone" href=""><i class="fi fi-brands-linkedin" style="line-height: 2.2;"></i></a>
-        </li>
-      </ul>
-    </div>
-
-
-    <div class="col mb-5 texto-rodape">
-      <h5 class="rodape-texto">Fale conosco</h5>
-      <ul class="nav flex-column">
-        <li class="nav-item mb-1"><a class="nav-link p-0 rodape-texto">Rua Cavour, 81</a></li>
-        <li class="nav-item mb-1"><a class="nav-link p-0 rodape-texto">Vila Prudente - São Paulo/SP</a></li>
-        <li class="nav-item mb-1"><a class="nav-link p-0 rodape-texto">Tel: +55 11 3214-3232</a></li>
-        <li class="nav-item mb-1"><a class="nav-link p-0 rodape-texto">Horário de atendimento - Segunda à sexta 09hr às 17h30</a></li>
-      </ul>
-    </div>
    
-  </footer>
 
-<p class="rodape-texto float-end"><a href="#">Voltar ao Topo </a></p>
-<p class="rodape-texto" style="color:white;">&copy; PROSPER 2023 | PROSPER SP MEDIÇÃO DE AGUA E GÁS LTDA &middot; 
-<a href="#">Privacidade</a> &middot; <a href="#">Termos de Uso</a></p>
-</div>
-
-
-    <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
-
+  <div class="container-fluid rodape-fundo">
+    <footer class="rodape row">
+      <div class="col mb-4 logo-rodape">
+        <a href="index.html"><img class="img-fluid" height="80%" src="img/Logo_Prosper_Branco_Site_250X150.png" > </a>
+        <ul class="nav col-md-6 justify-content-start list-unstyled d-flex"> 
+          <li class="ms-1">
+            <a class="nav-link rodape-icone" href=""><i class="fi fi-brands-instagram" style="line-height: 2.2;"></i></a>
+          </li>
+          <li class="ms-1">
+            <a class="nav-link rodape-icone" href=""><i class="fi fi-brands-linkedin" style="line-height: 2.2;"></i></a>
+          </li>
+        </ul>
+      </div>
+      <div class="col mb-5 texto-rodape">
+        <h5 class="rodape-texto">Fale conosco</h5>
+        <ul class="nav flex-column">
+          <li class="nav-item mb-1"><a class="nav-link p-0 rodape-texto">Rua Cavour, 81</a></li>
+          <li class="nav-item mb-1"><a class="nav-link p-0 rodape-texto">Vila Prudente - São Paulo/SP</a></li>
+          <li class="nav-item mb-1"><a class="nav-link p-0 rodape-texto">Tel: +55 11 3214-3232</a></li>
+          <li class="nav-item mb-1"><a class="nav-link p-0 rodape-texto">Horário de atendimento - Segunda à sexta 09hr às 17h30</a></li>
+        </ul>
+      </div>
+      <p class="float-start rodape-texto">&copy; PROSPER 2023 | PROSPER SP MEDIÇÃO DE AGUA E GÁS LTDA
+      <a class="float-end rodape-texto" href="#">Voltar ao Topo </a></p>
+    </footer>
+  </div>
+</main>
+      <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
       <script src="checkout.js"></script>
       <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
       <script async src="https://www.google.com/recaptcha/api.js?render=6LcmFdcmAAAAANNdra4nqpoRVGgXtK1asR_6jq6-"> </script>
