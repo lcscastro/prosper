@@ -44,8 +44,8 @@ body {
 }
 
 .texto-rodape {
-  margin-top: 2%;
-  margin-bottom: 0px;
+  /* margin-top: 2%; */
+  /* margin-bottom: 0px; */
 }
 
 .rodape-icone{
@@ -228,4 +228,57 @@ bottom: 480px;
   .rodape-fundo{
     height: 285px;
   }
+}
+
+/*Formato Monitor 425px*/
+@media only screen and (max-width: 425px){
+  body{
+    text-align: center;
+  }
+  .lead{
+    text-align:justify;
+  }
+  .texto-servico{
+    padding-top: 35px;
+    padding-bottom: 15px;
+    margin-bottom: 0px;
+  }
+  .featurette-divider{
+    margin: 2rem 0;
+  }
+
+  .featurette-heading{
+    margin-bottom: 25px;
+  }
+  h3{
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+  .rodape-texto{
+    font-size:12px;
+    display: flex;
+    justify-content: left;
+  }
+
+  .texto-rodape{
+    margin-top: 8%;
+    margin-bottom: 15px!important;
+  }
+
+  #rodape-texto-mobile {
+    margin-top: 15px;
+  }
+
+  #rodape-titulo-mobile{
+    font-size: 20px;
+  }
+
+  .navbar-toggler{
+    margin-right: 25px;
+  }
+
+  .menu-header{
+    margin-left: 0px;
+  }
+
 }
