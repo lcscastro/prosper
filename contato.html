@@ -142,9 +142,9 @@
       <div class="col-md-4 col-lg-6">
         <h2 class="titulo-h2">Seja um cliente <span>Pros</span><span>per</span></h2>
         <form class="needs-validation" novalidate>
-          <div class="row g-3">
+          <div class="row">
             
-            <div class="col-sm-8">
+            <div class="col-sm-4">
               <label for="nome" class="form-label">Seu Nome</label>
               <input type="text" class="form-control" id="nome" placeholder="" value="" required>
               <div class="invalid-feedback">
@@ -152,7 +152,7 @@
               </div>
             </div>
 
-            <div class="col-sm-8">
+            <div class="col-sm-4">
               <label for="contato" class="form-label">Telefone para Contato</label>
               <input type="text" class="form-control" id="contato" placeholder="" value="" required>
               <div class="invalid-feedback">
@@ -177,15 +177,7 @@
               </div>
             </div>
 
-            <div class="col-sm-8">
-              <label for="condominio" class="form-label">Nome do condominio</label>
-              <input type="text" class="form-control" id="condominio" placeholder="">
-            </div>
-
-            <div class="col-sm-8">
-              <label for="administradora" class="form-label">Nome do administradora</label>
-              <input type="text" class="form-control" id="administradora" placeholder="">
-            </div>
+            
 
             <div class="col-sm-5">
               <label for="Cidade" class="form-label">Cidade</label>
@@ -195,7 +187,7 @@
             <div class="col-sm-3">
               <label for="estado" class="form-label">Estado</label>
               <select class="form-select" id="estado" required>
-                <option value="">Selecione...</option>
+                <option value="">Selecione</option>
                 <option value="AC">Acre</option>
                 <option value="AL">Alagoas</option>
                 <option value="AP">Amapá</option>
@@ -230,16 +222,27 @@
               </div>
             </div>
 
-            <div class="col-3">
-              <label for="cep" class="form-label">CEP</label>
-              <input type="text" class="form-control" id="cep" placeholder="" required>
-              <div class="invalid-feedback">
-                Zip code required.
-              </div>
+          <div class="col-sm-3">
+            <label for="cep" class="form-label">CEP</label>
+            <input type="text" class="form-control" id="cep" placeholder="" required>
+            <div class="invalid-feedback">
+              Zip code required.
             </div>
           </div>
 
-          <div class="col-sm-3">
+          <div class="col-sm-6">
+            <label for="condominio" class="form-label">Nome do condominio</label>
+            <input type="text" class="form-control" id="condominio" placeholder="">
+          </div>
+
+          <div class="col-sm-5">
+            <label for="administradora" class="form-label">Nome do administradora</label>
+            <input type="text" class="form-control" id="administradora" placeholder="">
+          </div>
+
+        </div>
+
+          <div class="col-sm-4">
             <label for="perfil" class="form-label">Perfil</label>
             <select class="form-select" id="perfil" required>
               <option value="">Selecione o perfil...</option>
@@ -257,7 +260,7 @@
             <textarea class="form-control" id="exampleFormControlTextarea1" rows="4" style="width: 650px;"></textarea>
           </div>
 
-          <button class="btn btn-primary btn-lg btn-msg" type="submit">Enviar Mensagem</button>
+          <button class="btn-msg btn btn-primary btn-lg " type="submit">Enviar Mensagem</button>
         </form>
       </div>
     </div>

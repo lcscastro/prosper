@@ -24,9 +24,24 @@ body{
   flex-direction: row;
   
 }
+@media only screen and (max-width: 1440px){
+.btn-msg{
+  margin: 10px;
+}
+}
+
 @media only screen and (max-width: 1024px) and (min-width:770px){
 .img-contato{
   max-width: 100%;
   height: auto;
 }
+
+.form-label{
+  font-size: 13px;
+}
+
+.form-select{
+  font-size: 11px;
+}
+
 }
