@@ -156,6 +156,10 @@ body {
   margin-bottom: 36px;
 }
 
+#logo-menu_a{
+  margin-left: 5rem;
+}
+
 /* RESPONSIVE CSS
 -------------------------------------------------- */
 
@@ -234,9 +238,10 @@ bottom: 480px;
 @media only screen and (max-width: 425px){
   body{
     text-align: center;
+    letter-spacing:0cm;
   }
   .lead{
-    text-align:justify;
+    text-align:center;
   }
   .texto-servico{
     padding-top: 35px;
@@ -281,4 +286,43 @@ bottom: 480px;
     margin-left: 0px;
   }
 
+  .btn-lojaGoogle{
+    width: 100px;
+    position: relative;
+    left: 25%;
+    bottom: 40vh;
+  }
+  
+  .btn-lojaApple{
+    width: 115px;
+    position: relative;
+    left: 25%;
+    bottom: 40vh;
+  }
+
+}
+
+@media only screen and (max-width: 320px){
+
+ .texto-rodape{
+  margin: 5px;
+ }
+  
+  #rodape-titulo-mobile{
+    padding-bottom: 10px;
+}
+
+.rodape-texto{
+  font-size:12px;
+  display: flex;
+  justify-content: center;
+}
+
+.rodape-fundo{
+  height: 310px;
+}
+
+#area-menu{
+  flex-wrap: nowrap;
+}
 }
