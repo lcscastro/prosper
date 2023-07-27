@@ -93,21 +93,21 @@
     
     <header data-bs-theme="light" class="d-flex flex-wrap justify-content-center py-2 mb-2 border-bottom">
       <nav class="navbar navbar-expand-md navbar-light fixed-top bg-light">
-        <div class="container-fluid" style="background-color: #fff">
-          <a style="margin-left: 5rem"; class="navbar-brand" href="index.html"><img class="img-fluid" width="180px" height="80%" src="img/Logo_Prosper_Site_250X150.png" alt="LogoTipo da Empresa"> </a>
+        <div id="area-menu" class="container-fluid" style="background-color: #fff">
+          <a id="logo-menu_a" class="navbar-brand" href="index.html"><img id="logo-menu-img" class="img-fluid" src="img/Logo_Prosper_Site_250X150.png" alt="LogoTipo da Empresa"> </a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
            <span class="navbar-toggler-icon"></span> 
           </button>
           <div class="menu-header collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav me-auto mb-2 mb-md-0">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#" style="font-size: 20px;color: #000">Home</a>
+                <a class="nav-link active" aria-current="page" href="index.html" style="font-size: 20px;color: #000">Home</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="index.html#servico" style="font-size: 20px;color: #000">Serviços</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="telemetria.html" style="font-size: 20px;color: #000">Telemetria</a>
+                <a class="nav-link" href="#" style="font-size: 20px;color: #000">Telemetria</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="cliente.html" style="font-size: 20px;color: #000">Área do Cliente</a>
@@ -159,7 +159,7 @@
   <!-- /INFOGRAFICO -->
 
   <!-- FOOTER -->
- <div class="container-fluid rodape-fundo">
+  <div class="container-fluid rodape-fundo">
     <footer class="rodape row py-2 my-2 border-top">
       <div class="col mb-4 logo-rodape">
         <a href="index.html"><img class="img-fluid" height="80%" src="img/Logo_Prosper_Branco_Site_250X150.png" > </a>
@@ -172,21 +172,18 @@
           </li>
         </ul>
       </div>
-
       <div class="col mb-5 texto-rodape">
-        <h5 class="rodape-texto">Fale conosco</h5>
+        <h5 class="rodape-texto" id="rodape-titulo-mobile">Fale conosco</h5>
         <ul class="nav flex-column">
           <li class="nav-item mb-1"><a class="nav-link p-0 rodape-texto">Rua Cavour, 81</a></li>
           <li class="nav-item mb-1"><a class="nav-link p-0 rodape-texto">Vila Prudente - São Paulo/SP</a></li>
           <li class="nav-item mb-1"><a class="nav-link p-0 rodape-texto">Tel: +55 11 3214-3232</a></li>
-          <li class="nav-item mb-1"><a class="nav-link p-0 rodape-texto">Horário de atendimento - Segunda à sexta 09hr às 17h30</a></li>
+          <li class="nav-item mb-1"><a class="nav-link p-0 rodape-texto" id="rodape-texto-mobile">Horário de atendimento - Segunda à sexta 09hr às 17h30</a></li>
         </ul>
       </div>
-    
       <p class="float-start rodape-texto">&copy; PROSPER 2023 | PROSPER SP MEDIÇÃO DE AGUA E GÁS LTDA
       <a class="float-end rodape-texto" href="#">Voltar ao Topo </a></p>
     </footer>
-  
   </div>
 </main>
     <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>

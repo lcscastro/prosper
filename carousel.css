@@ -7,7 +7,7 @@
 body {
   font-family: 'Montserrat', sans-serif;
   height: 100vh;
-  box-sizing: border-box;
+  /* box-sizing: border-box; */
   padding-top: 3rem;
   /* padding-bottom: 3rem; */
   /* color: rgb(var(--bs-tertiary-color-rgb)); */
@@ -156,8 +156,9 @@ body {
   margin-bottom: 36px;
 }
 
-#logo-menu_a{
-  margin-left: 5rem;
+#logo-menu-img{
+  width:180px;
+  height:80%;
 }
 
 /* RESPONSIVE CSS
@@ -234,10 +235,19 @@ bottom: 480px;
   }
 }
 
-/*Formato Monitor 425px*/
+
+
+/*Formato MOBILE 425px*/
+@media screen and (min-width: 375px){
+  #menu-mobile{
+    margin-right: 25px;
+  }
+}
+
+
 @media only screen and (max-width: 425px){
   body{
-    text-align: center;
+    /* text-align: center; */
     letter-spacing:0cm;
   }
   .lead{
@@ -278,12 +288,9 @@ bottom: 480px;
     font-size: 20px;
   }
 
-  .navbar-toggler{
-    margin-right: 25px;
-  }
-
   .menu-header{
     margin-left: 0px;
+    align-content: baseline;
   }
 
   .btn-lojaGoogle{
@@ -298,6 +305,18 @@ bottom: 480px;
     position: relative;
     left: 25%;
     bottom: 40vh;
+  }
+
+  .area-cliente{
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  .nav-link{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
   }
 
 }
@@ -322,7 +341,31 @@ bottom: 480px;
   height: 310px;
 }
 
-#area-menu{
-  flex-wrap: nowrap;
+#logo-menu-img{
+  width:150px;
+  height:80%;
 }
+
+.btn-lojaGoogle{
+  width: 80px;
+  position: relative;
+  left: 25%;
+  bottom: 28vh;
+}
+
+.btn-lojaApple{
+  width: 80px;
+  position: relative;
+  left: 25%;
+  bottom: 28vh;
+}
+
+.texto-servico{
+  margin-bottom: 0px;
+}
+
+#menu-mobile{
+  /* margin-right: 5px; */
+}
+
 }

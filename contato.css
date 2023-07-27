@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
 
 body{
-  font-family: 'Montserrat', sans-serif;
+  /* font-family: 'Montserrat', sans-serif; */
 }
 
 .container {
@@ -19,11 +19,15 @@ body{
 }
 
 .area-form{
-  margin-top: 50px;
+  /* margin-top: 50px; */
   display: flex;
   flex-direction: row;
-  
 }
+
+#text-area-contato{
+  width: 650px;
+}
+
 @media only screen and (max-width: 1440px){
 .btn-msg{
   margin: 10px;
@@ -44,4 +48,9 @@ body{
   font-size: 11px;
 }
 
+}
+@media only screen and (max-width: 425px){
+#text-area-contato{
+  width: 100%;
+}
 }
