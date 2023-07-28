@@ -87,7 +87,7 @@
 }
 }
 
-@media only screen and (max-width: 425px){
+@media only screen and (max-width: 500px){
   .telemetria-espaco{
   flex-direction:column;
   }
