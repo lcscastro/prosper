@@ -7,10 +7,8 @@
 body {
   font-family: 'Montserrat', sans-serif;
   height: 100vh;
-  /* box-sizing: border-box; */
   padding-top: 3rem;
-  /* padding-bottom: 3rem; */
-  /* color: rgb(var(--bs-tertiary-color-rgb)); */
+  
 }
 
 
@@ -33,10 +31,9 @@ body {
 }
 
 .rodape-texto {
-  /* display: flex; */
   margin-bottom: 0px;
   color:white;
-  /* justify-content: right; */
+
 }
 
 .logo-rodape{
@@ -245,9 +242,9 @@ bottom: 480px;
 }
 
 
-@media only screen and (max-width: 425px){
+@media only screen and (min-width: 425px){
   body{
-    /* text-align: center; */
+    text-align: center;
     letter-spacing:0cm;
   }
   .lead{
