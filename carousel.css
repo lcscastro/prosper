@@ -216,8 +216,8 @@ body {
   position: relative;
   top: 525px;
   left: 675px;
-  
 }
+
 .btn-lojaGoogle{
 bottom: 480px;
 }
@@ -250,6 +250,15 @@ bottom: 480px;
   .lead{
     text-align:center;
   }
+
+  .btn-painel-principal{
+    position: relative;
+    top: 25vh;
+    left: 11vh;
+    /* width: 100px; */
+    font-size: 1.0rem;
+  }
+  
   .texto-servico{
     padding-top: 35px;
     padding-bottom: 15px;
@@ -269,7 +278,7 @@ bottom: 480px;
   .rodape-texto{
     font-size:12px;
     display: flex;
-    justify-content: left;
+    justify-content: center;
   }
 
   .texto-rodape{
@@ -294,14 +303,14 @@ bottom: 480px;
     width: 100px;
     position: relative;
     left: 25%;
-    bottom: 40vh;
+    bottom: 1vh;
   }
   
   .btn-lojaApple{
     width: 115px;
     position: relative;
     left: 25%;
-    bottom: 40vh;
+
   }
 
   .area-cliente{
