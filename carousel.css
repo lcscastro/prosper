@@ -6,9 +6,7 @@
 
 body {
   font-family: 'Montserrat', sans-serif;
-  height: 100vh;
-  padding-top: 3rem;
-  
+  height: 100vh;  
 }
 
 
@@ -241,6 +239,38 @@ bottom: 480px;
   }
 }
 
+@media screen and (min-width: 425px){
+  .btn-lojaGoogle{
+    width: 100px;
+    position: relative;
+    left: 25%;
+    bottom: 20vh;
+  }
+  
+  .btn-lojaApple{
+    width: 115px;
+    position: relative;
+    left: 25%;
+    bottom: 20vh;
+  }
+}
+
+@media screen and (min-width: 375px){
+  .btn-lojaGoogle{
+    width: 95px;
+    position: relative;
+    left: 25%;
+    bottom: 20vh;
+  }
+  
+  .btn-lojaApple{
+    width: 100px;
+    position: relative;
+    left: 25%;
+    bottom: 20vh;
+  }
+}
+
 
 @media only screen and (max-width: 500px) and (min-width: 320px){
   body{
@@ -299,20 +329,6 @@ bottom: 480px;
     align-content: baseline;
   }
 
-  .btn-lojaGoogle{
-    width: 100px;
-    position: relative;
-    left: 25%;
-    bottom: 1vh;
-  }
-  
-  .btn-lojaApple{
-    width: 115px;
-    position: relative;
-    left: 25%;
-
-  }
-
   .area-cliente{
     margin-top: 20px;
     margin-bottom: 20px;
@@ -356,22 +372,18 @@ bottom: 480px;
   width: 80px;
   position: relative;
   left: 25%;
-  bottom: 28vh;
+  bottom: 16vh;
 }
 
 .btn-lojaApple{
   width: 80px;
   position: relative;
   left: 25%;
-  bottom: 28vh;
+  bottom: 16vh;
 }
 
 .texto-servico{
   margin-bottom: 0px;
-}
-
-#menu-mobile{
-  /* margin-right: 5px; */
 }
 
 }
