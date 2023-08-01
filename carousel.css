@@ -132,10 +132,7 @@ body {
   background: linear-gradient(to right, #25246b 50%,#981526 100%);
 }
 
-.rodape-texto{
-  color:white;
-  text-decoration: none;
-}
+
 
 .menu-header{
   margin-left: 12rem;
@@ -170,6 +167,12 @@ body {
 @media (min-width: 62em) {
   .featurette-heading {
     margin-top: 2rem;
+  }
+}
+
+@media only screen and (min-width:770px){
+  .texto-rodape{
+    margin-top: 20px;
   }
 }
 
@@ -304,6 +307,8 @@ bottom: 480px;
     font-size:12px;
     display: flex;
     justify-content: center;
+    color:white;
+    text-decoration: none;
   }
 
   .texto-rodape{
