@@ -1,3 +1,7 @@
+<?php
+INCLUDE_ONCE './config.php';
+?>
+
 <!doctype html>
 <html lang="pt-br" data-bs-theme="auto">
   <head><script src="../assets/js/color-modes.js"></script>
@@ -133,21 +137,28 @@
       
     </header>
 
-
     <div class="row area-form">
       
       <div class="col-md-6"> <!--col-md-8 -->
        <img class="img-contato img-fluid" src="./img/banner_pag_orcamento.png">
      </div>
 
-      <div class="col-md-4 col-lg-6">
+      <div class="col-md-4 col-lg-6" id="kit-form">
         <h2 class="titulo-h2">Seja um cliente <span>Pros</span><span>per</span></h2>
-        <form class="needs-validation" novalidate>
+        
+        <span id="msg"></span>
+        <form class="needs-validation" novalidate method="POST" action="" id="form-cad-msg-contato">
+
+          <!-- ENVIAR A CHAVE PARA O JS -->
+          
+          <input type="hidden" name="sitekey" id="sitekey" value="<?php echo SITE_KEY; ?>">
+          <input type="hidden" name="g-recaptcha-response" id="g-recaptcha-response">
+
           <div class="row">
             
             <div class="col-sm-4">
               <label for="nome" class="form-label">Seu Nome</label>
-              <input type="text" class="form-control" id="nome" placeholder="" value="" required>
+              <input type="text" class="form-control" id="nome" placeholder="Digite o nome completo" value="" required>
               <div class="invalid-feedback">
                 Valid first name is required.
               </div>
@@ -155,7 +166,7 @@
 
             <div class="col-sm-4">
               <label for="contato" class="form-label">Telefone para Contato</label>
-              <input type="text" class="form-control" id="contato" placeholder="" value="" required>
+              <input type="text" class="form-control" id="contato" placeholder="Digite o seu contato" value="" required>
               <div class="invalid-feedback">
                 Valid first name is required.
               </div>
@@ -219,7 +230,7 @@
                 <option value="EX">Estrangeiro</option>
               </select>
               <div class="invalid-feedback">
-                Please provide a valid state.
+                Insira um estado
               </div>
             </div>
 
@@ -252,16 +263,16 @@
               <option>Morador Conselheiro</option>
             </select>
             <div class="invalid-feedback">
-              Please provide a valid state.
+              Insira o perfil
             </div>
           </div>
 
           <div class="mb-sm-auto">
-            <label for="exampleFormControlTextarea1" class="form-label">Sua Mensagem</label>
-            <textarea id="text-area-contato" class="form-control" id="exampleFormControlTextarea1" rows="4"></textarea>
+            <label for="mensagem" class="form-label">Sua Mensagem</label>
+            <textarea id="text-area-contato" class="form-control" id="mensagem" rows="4"></textarea>
           </div>
 
-          <button class="btn-msg btn btn-primary btn-lg " type="submit">Enviar Mensagem</button>
+          <button class="btn-msg btn btn-primary btn-lg " type="submit" name="btn-msg" id="btn-msg">Enviar Mensagem</button>
         </form>
       </div>
     </div>
@@ -298,8 +309,8 @@
     </div>
 </main> 
       <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
-      
       <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
-      <script async src="https://www.google.com/recaptcha/api.js?render=6LcmFdcmAAAAANNdra4nqpoRVGgXtK1asR_6jq6-"> </script>
-  </body>
+      <script async src="https://www.google.com/recaptcha/api.js?render=<?php echo SITE_KEY; ?>"> </script>
+      <script src="./custom.js"></script>
+    </body>
 </html>

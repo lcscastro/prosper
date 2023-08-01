@@ -28,7 +28,13 @@ body{
   width: 650px;
 }
 
-@media only screen and (max-width: 1440px){
+@media only screen and (max-width: 2400px){
+  #kit-form{
+    margin-top: 110px
+  }
+  }
+
+@media only screen and (max-width: 2400px){
 .btn-msg{
   margin: 10px;
 }
