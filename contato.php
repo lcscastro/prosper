@@ -4,8 +4,7 @@ INCLUDE_ONCE './config.php';
 
 <!doctype html>
 <html lang="pt-br" data-bs-theme="auto">
-  <head><script src="../assets/js/color-modes.js"></script>
-
+  <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
@@ -97,9 +96,10 @@ INCLUDE_ONCE './config.php';
     <!-- Custom styles for this template -->
     <link href="contato.css" rel="stylesheet">
     <link href="carousel.css" rel="stylesheet">
+    <script async src="https://www.google.com/recaptcha/api.js?render=<?php echo SITE_KEY;?>"> </script>
+    
   </head>
   <body class="bg-body-tertiary">
-   
     <header data-bs-theme="light" class="d-flex flex-wrap justify-content-center py-2 mb-2 border-bottom">
       <nav class="navbar bg-light navbar-expand-md navbar-light fixed-top" style="padding-top: 8px; padding-bottom: 0px;">
         <div id="area-menu" class="container-fluid">
@@ -136,9 +136,7 @@ INCLUDE_ONCE './config.php';
       </nav>
       
     </header>
-
     <div class="row area-form">
-      
       <div class="col-md-6"> <!--col-md-8 -->
        <img class="img-contato img-fluid" src="./img/banner_pag_orcamento.png">
      </div>
@@ -146,19 +144,18 @@ INCLUDE_ONCE './config.php';
       <div class="col-md-4 col-lg-6" id="kit-form">
         <h2 class="titulo-h2">Seja um cliente <span>Pros</span><span>per</span></h2>
         
-        <span id="msg"></span>
-        <form class="needs-validation" novalidate method="POST" action="" id="form-cad-msg-contato">
+        <form class="needs-validation" method="POST" id="form-contato" name="form-contato">
 
           <!-- ENVIAR A CHAVE PARA O JS -->
           
-          <input type="hidden" name="sitekey" id="sitekey" value="<?php echo SITE_KEY; ?>">
+          <input type="hidden" name="sitekey" id="sitekey" value="<?php echo SITE_KEY;?>">
           <input type="hidden" name="g-recaptcha-response" id="g-recaptcha-response">
 
           <div class="row">
             
             <div class="col-sm-4">
               <label for="nome" class="form-label">Seu Nome</label>
-              <input type="text" class="form-control" id="nome" placeholder="Digite o nome completo" value="" required>
+              <input type="text" class="form-control" name="nome" id="nome" placeholder="Digite o nome completo" required>
               <div class="invalid-feedback">
                 Valid first name is required.
               </div>
@@ -166,16 +163,15 @@ INCLUDE_ONCE './config.php';
 
             <div class="col-sm-4">
               <label for="contato" class="form-label">Telefone para Contato</label>
-              <input type="text" class="form-control" id="contato" placeholder="Digite o seu contato" value="" required>
+              <input type="text" class="form-control" name="contato" id="contato" placeholder="Digite o seu contato" required>
               <div class="invalid-feedback">
                 Valid first name is required.
               </div>
             </div>
 
             <div class="col-sm-8">
-              <!-- <span class="text-body-secondary">(Optional)</span> -->
               <label for="email" class="form-label">Email</label>
-              <input type="email" class="form-control" id="email" placeholder="voce@exemplo.com">
+              <input type="email" class="form-control" name="email" id="email" placeholder="voce@exemplo.com">
               <div class="invalid-feedback">
                 Please enter a valid email address for shipping updates.
               </div>
@@ -183,22 +179,20 @@ INCLUDE_ONCE './config.php';
 
             <div class="col-sm-8">
               <label for="endereco" class="form-label">Endereço</label>
-              <input type="text" class="form-control" id="endereco" placeholder="" required>
+              <input type="text" class="form-control" name="endereco" id="endereco" placeholder="" required>
               <div class="invalid-feedback">
                 Please enter your shipping address.
               </div>
             </div>
 
-            
-
             <div class="col-sm-5">
               <label for="Cidade" class="form-label">Cidade</label>
-              <input type="text" class="form-control" id="Cidade" placeholder="">
+              <input type="text" class="form-control" name="cidade" id="cidade" placeholder="">
             </div>
 
             <div class="col-sm-3">
               <label for="estado" class="form-label">Estado</label>
-              <select class="form-select" id="estado" required>
+              <select class="form-select" name="estado" id="estado" required>
                 <option value="">Selecione</option>
                 <option value="AC">Acre</option>
                 <option value="AL">Alagoas</option>
@@ -236,7 +230,7 @@ INCLUDE_ONCE './config.php';
 
           <div class="col-sm-3">
             <label for="cep" class="form-label">CEP</label>
-            <input type="text" class="form-control" id="cep" placeholder="" required>
+            <input type="text" class="form-control" name="cep" id="cep" placeholder="" required>
             <div class="invalid-feedback">
               Zip code required.
             </div>
@@ -244,19 +238,18 @@ INCLUDE_ONCE './config.php';
 
           <div class="col-sm-6">
             <label for="condominio" class="form-label">Nome do condominio</label>
-            <input type="text" class="form-control" id="condominio" placeholder="">
+            <input type="text" class="form-control" name="condominio" id="condominio" placeholder="">
           </div>
 
           <div class="col-sm-5">
             <label for="administradora" class="form-label">Nome do administradora</label>
-            <input type="text" class="form-control" id="administradora" placeholder="">
+            <input type="text" class="form-control" name="administradora" id="administradora" placeholder="">
           </div>
 
         </div>
-
           <div class="col-sm-4">
             <label for="perfil" class="form-label">Perfil</label>
-            <select class="form-select" id="perfil" required>
+            <select class="form-select" name="perfil" id="perfil" required>
               <option value="">Selecione o perfil...</option>
               <option>Sindico</option>
               <option>Administradora</option>
@@ -269,15 +262,14 @@ INCLUDE_ONCE './config.php';
 
           <div class="mb-sm-auto">
             <label for="mensagem" class="form-label">Sua Mensagem</label>
-            <textarea id="text-area-contato" class="form-control" id="mensagem" rows="4"></textarea>
+            <textarea id="text-area-contato" class="form-control" name="mensagem" id="mensagem" rows="4"></textarea>
           </div>
 
-          <button class="btn-msg btn btn-primary btn-lg " type="submit" name="btn-msg" id="btn-msg">Enviar Mensagem</button>
+          <button class="btn-msg btn btn-primary btn-lg" type="submit" name="btn-msg" id="btn-msg">Enviar Mensagem</button>
+          <span name="msg" id="msg"></span>
         </form>
       </div>
     </div>
-
-
   <main>
 
   <!-- FOOTER -->
@@ -308,9 +300,8 @@ INCLUDE_ONCE './config.php';
       </footer>
     </div>
 </main> 
-      <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
+      <script src="custom.js"></script>
+      <script src="./assets/dist/js/bootstrap.bundle.min.js"></script>
       <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
-      <script async src="https://www.google.com/recaptcha/api.js?render=<?php echo SITE_KEY; ?>"> </script>
-      <script src="./custom.js"></script>
     </body>
 </html>

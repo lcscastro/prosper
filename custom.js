@@ -1,20 +1,22 @@
-  const formCadMsgContato = document.getElementById('form-cad-msg-contato');
+  const formCadMsgContato = document.getElementById("form-contato");
+
   if (formCadMsgContato){
-    formCadMsgContato.addEventListener("Submit", (e) => {
-        e.preventDefault();
+    
+    formCadMsgContato.addEventListener("submit", (e) => {
+        e.preventDefault();       
         grecaptcha.ready(function() {
             // Recuperar a site key
-                var sitekey = Document.getElementById('sitekey').value;
-                grecaptcha.execute('sitekey', {action: 'submit'}).then(async function(token) {
+                var sitekey = document.getElementById('sitekey').value;
+                grecaptcha.execute(sitekey, {action: 'submit'}).then(async function(token) {
                     // Add your logic to submit to your backend server here.
                     document.getElementById('g-recaptcha-response').value = token;
 
-                    const dadosform = new FormData(form-cad-msg-contato);
-                    dadosform.append("g-recaptcha-response", token);
+                    const dadosForm = new FormData(formCadMsgContato);
+                    dadosForm.append("g-recaptcha-response", token);
 
-                    await fetch("enviar.php", {
+                    const dados = await fetch("enviar.php", {
                         method: "POST",
-                        body: dadosform
+                        body: dadosForm
                     });
 
                     const resposta = await dados.json();
@@ -27,5 +29,5 @@
                     }
                 });
               });
-    })
-  }
+    });
+}
