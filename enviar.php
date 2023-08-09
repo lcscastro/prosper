@@ -41,14 +41,14 @@ $mailer->Sender = 'dev@comti.com.br';
 $mailer->FromName = "Contato - SITE Prosper";          // seu nome
 $mailer->Subject = "Contato - SITE Prosper";             // assunto da mensagem
 $mailer->AddAddress($address, "destinatario"); 
-
+$mailer->AddAddress("atendimento@prosperservice.com.br", "destinatario"); 
 
 //ENVIO SEM VALIDAÇÃO TOTAL
   $corpoMSG = "<strong>Nome:</strong>".$dados['nome']."<br><strong>Contato:</strong>".$dados['contato']."<br><strong>Email:</strong>".$dados['email']."<br><strong>Endereço:</strong>".$dados['endereco']."<br><strong>Cidade:</strong>".$dados['cidade']."<br><strong>Estado:</strong>".$dados['estado']."<br><strong>CEP:</strong>".$dados['cep']."<br><strong>Condominio:</strong>".$dados['condominio']."<br><strong>Administradora:</strong>".$dados['administradora']."<br><strong>Perfil:</strong>".$dados['perfil']."<br><strong>Mensagem:</strong>".$dados['mensagem']."<br>";
   // $mailer->MsgHTML($corpoMSG);
   $mailer->MsgHTML(utf8_decode($corpoMSG));
   $mailer->Send();
-  
+  header("Location: index.html");
 
 //VALIDAÇÃO CAPTCHA
 
@@ -67,6 +67,7 @@ if(isset($dados['sitekey'])){
 
     $dados_recaptcha = json_decode($resposta);
     }
+  }
 
 if($dados_recaptcha->success){
 
@@ -80,9 +81,6 @@ if($dados_recaptcha->success){
   $retorna = ['status' => false, 'msg' => "ERRO: Identificado tentativa de email com bot!"];
   echo json_encode($retorna);
 }
-}
-
-header("Location: index.html"); //PROVISORIO
 
 ?>
 
