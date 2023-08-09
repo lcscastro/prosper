@@ -130,7 +130,8 @@ body {
 }
 
 .rodape-fundo{
-  background: linear-gradient(to right, #25246b 50%,#981526 100%);
+  /* background: linear-gradient(to right, #25246b 50%,#981526 100%); */
+  background-color: #25246b;
 }
 
 .menu-header{
