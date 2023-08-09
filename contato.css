@@ -28,6 +28,11 @@ body{
   width: 650px;
 }
 
+.form-label {
+  margin-bottom: 0;
+  margin-top: .5rem;
+}
+
 @media only screen and (max-width: 2400px){
   #kit-form{
     margin-top: 110px
