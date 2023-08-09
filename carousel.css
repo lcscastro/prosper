@@ -2,7 +2,7 @@
 -------------------------------------------------- */
 /* Padding below the footer and lighter body text */
 
-  @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600&display=swap');
 
 body {
   font-family: 'Montserrat', sans-serif;
@@ -78,11 +78,12 @@ body {
 
 .btn-painel-principal{
   font-size: 25px;
-  background: linear-gradient(to right, #25246b 50%,#981526 100%);
+  /* background: linear-gradient(to right, #25246b 50%,#981526 100%); */
+  background-color: #981526;
   border-color: white;
   position: relative;
-  top: 925px;
-  left: 1325px;
+  top: 600px;
+  left: 400px;
   
 }
 
@@ -92,7 +93,8 @@ body {
 
 .btn-painel-telemetria{
   font-size: 25px;
-  background: linear-gradient(to right, #25246b 50%,#981526 100%);
+  /* background: linear-gradient(to right, #25246b 50%,#981526 100%); */
+  background-color: #25246b;
   border-color: white;
 }
 
@@ -114,25 +116,22 @@ body {
 }
 
 .btn-lojaGoogle{
-  width: 180px;
+  width: 190px;
   position: relative;
-  left: 64%;
-  bottom: 90vh;
-
+  left: 30%;
+  bottom: 78vh;
 }
 
 .btn-lojaApple{
-  width: 190px;
+  width: 200px;
   position: relative;
-  left: 64%;
-  bottom: 90vh;
+  left: 30%;
+  bottom: 78vh;
 }
 
 .rodape-fundo{
   background: linear-gradient(to right, #25246b 50%,#981526 100%);
 }
-
-
 
 .menu-header{
   margin-left: 12rem;
@@ -182,19 +181,25 @@ body {
 
   .featurette-heading {
     margin-top: 2rem;
-}
+  }
+
+  .img-4-diferente{
+    padding-left: 45px;
+  }
 
   .btn-painel-principal{
     position: relative;
-    top: 725px;
-    left: 975px;
+    top: 480px;
+    left: 300px;
     
   }
   .btn-lojaGoogle{
-  bottom: 663px;
+    bottom: 590px;
+    left: 380px;
   }
   .btn-lojaApple{
-    bottom: 663px;
+    bottom: 590px;
+    left: 380px;
   }
 }
 
@@ -210,15 +215,21 @@ body {
 
 .btn-painel-principal{
   position: relative;
-  top: 525px;
-  left: 675px;
+  font-size: 18px;
+  height: 40px;
+  top: 320px;
+  left: 220px;
 }
 
 .btn-lojaGoogle{
-bottom: 480px;
+  left: 250px;
+  width: 160px;
+  bottom: 420px;
 }
 .btn-lojaApple{
-  bottom: 480px;
+  left: 255px;
+  width: 170px;
+  bottom: 420px;
 }
 }
 
@@ -239,17 +250,17 @@ bottom: 480px;
 
 @media screen and (max-width: 425px){
   .btn-lojaGoogle{
-    width: 100px;
+    width: 80px;
     position: relative;
-    left: 25%;
-    bottom: 20vh;
+    left: -8%;
+    bottom: 21vh;
   }
   
   .btn-lojaApple{
-    width: 115px;
+    width: 86px;
     position: relative;
-    left: 25%;
-    bottom: 20vh;
+    left: -8%;
+    bottom: 21vh;
   }
 }
 
@@ -281,9 +292,8 @@ bottom: 480px;
 
   .btn-painel-principal{
     position: relative;
-    top: 25vh;
-    left: 11vh;
-    /* width: 100px; */
+    top: 20vh;
+    left: -90px;
     font-size: 1.0rem;
   }
   
