@@ -458,3 +458,23 @@ body {
   }
 
 }
+
+/*Formato Monitor 1280px*/
+@media only screen and (max-width: 1280px) and (min-width:1280px){
+  .btn-painel-principal{
+    position: relative;
+    top: 410px;
+    left: 255px;
+  }
+
+  .btn-lojaGoogle {
+    bottom: 430px;
+    left: 355px;
+  }
+
+  .btn-lojaApple {
+    bottom: 430px;
+    left: 355px;
+  }
+
+}
