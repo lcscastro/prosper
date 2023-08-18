@@ -272,8 +272,8 @@ INCLUDE_ONCE './config.php';
     </div>
   <main>
 
-  <!-- FOOTER -->
-    <div class="container-fluid rodape-fundo">
+ <!-- FOOTER -->
+ <div class="container-fluid rodape-fundo">
       <footer class="rodape row py-2 my-2 border-top">
         <div class="col mb-4 logo-rodape">
           <a href="index.html"><img class="img-fluid" height="80%" src="img/Logo_Prosper_Branco_Site_250X150.png" > </a>
@@ -295,8 +295,8 @@ INCLUDE_ONCE './config.php';
             <li class="nav-item mb-1"><a class="nav-link p-0 rodape-texto" id="rodape-texto-mobile">Horário de atendimento - Segunda à sexta 09hr às 17h30</a></li>
           </ul>
         </div>
-        <p class="float-start rodape-texto">&copy; PROSPER 2023 | PROSPER SP MEDIÇÃO DE AGUA E GÁS LTDA
-        <a class="float-end rodape-texto" href="#">Voltar ao Topo </a></p>
+        <p class="rodape-texto-empresa" style="font-size: 14px;">&copy; PROSPER 2023 | PROSPER SP MEDIÇÃO DE AGUA E GÁS LTDA</p>
+        <!-- <a class="rodape-texto" href="#">Voltar ao Topo </a> -->
       </footer>
     </div>
 </main> 

@@ -437,3 +437,24 @@ body {
 }
 
 }
+
+
+/*Formato Monitor 1326px*/
+@media only screen and (max-width: 1326px) and (min-width:1326px){
+  .btn-painel-principal{
+    position: relative;
+    top: 440px;
+    left: 270px;
+  }
+
+  .btn-lojaGoogle {
+    bottom: 450px;
+    left: 370px;
+  }
+
+  .btn-lojaApple {
+    bottom: 450px;
+    left: 380px;
+  }
+
+}
