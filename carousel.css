@@ -514,3 +514,22 @@ body {
   }
 
 }
+
+@media only screen and (max-width: 1880px) and (min-width:1880px){
+  .btn-painel-principal{
+    position: relative;
+    top: 550px;
+    left: 380px;
+  }
+
+  .btn-lojaGoogle {
+    bottom: 600px;
+    left: 520px;
+  }
+
+  .btn-lojaApple {
+    bottom: 600px;
+    left: 520px;
+  }
+  
+}
