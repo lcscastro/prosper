@@ -195,10 +195,44 @@ body {
   }
 }
 
-@media only screen and (min-width:770px){
-  .texto-rodape{
-    margin-top: 20px;
+
+
+@media only screen and (max-width: 2560px) and (min-width:1881px){
+  .btn-painel-principal{
+    position: relative;
+    top: 580px;
+    left: 385px;
   }
+
+  .btn-lojaGoogle {
+    bottom: 640px;
+    left: 530px;
+  }
+
+  .btn-lojaApple {
+    bottom: 640px;
+    left: 530px;
+  }
+  
+}
+
+@media only screen and (max-width: 1880px) and (min-width:1880px){
+  .btn-painel-principal{
+    position: relative;
+    top: 550px;
+    left: 380px;
+  }
+
+  .btn-lojaGoogle {
+    bottom: 600px;
+    left: 520px;
+  }
+
+  .btn-lojaApple {
+    bottom: 600px;
+    left: 520px;
+  }
+  
 }
 
 
@@ -228,6 +262,49 @@ body {
     left: 400px;
   }
 }
+
+
+/*Formato Monitor 1326px*/
+@media only screen and (max-width: 1366px) and (min-width:1326px){
+  .btn-painel-principal{
+    position: relative;
+    top: 440px;
+    left: 270px;
+  }
+
+  .btn-lojaGoogle {
+    bottom: 450px;
+    left: 370px;
+  }
+
+  .btn-lojaApple {
+    bottom: 450px;
+    left: 380px;
+  }
+
+}
+
+/*Formato Monitor 1280px*/
+@media only screen and (max-width: 1280px) and (min-width:1280px){
+  .btn-painel-principal{
+    position: relative;
+    top: 410px;
+    left: 255px;
+  }
+
+  .btn-lojaGoogle {
+    bottom: 430px;
+    left: 355px;
+  }
+
+  .btn-lojaApple {
+    bottom: 430px;
+    left: 355px;
+  }
+
+}
+
+
 
 /*Formato Monitor 1024px*/
 @media only screen and (max-width: 1024px) and (min-width:770px){
@@ -264,6 +341,7 @@ body {
 }
 }
 
+
 @media only screen and (max-width: 1024px){
   .rodape-fundo{
     height: 285px;
@@ -272,31 +350,11 @@ body {
 
 
 
-/*Formato MOBILE 425px*/
-@media screen and (max-width: 375px){
-  #menu-mobile{
-    margin-right: 25px;
+@media only screen and (min-width:770px){
+  .texto-rodape{
+    margin-top: 20px;
   }
 }
-
-@media screen and (max-width: 425px){
-  .btn-lojaGoogle{
-    width: 80px;
-    position: relative;
-    left: -8%;
-    bottom: 21vh;
-  }
-  
-  .btn-lojaApple{
-    width: 86px;
-    position: relative;
-    left: -8%;
-    bottom: 21vh;
-  }
-}
-
-
-
 
 @media only screen and (max-width: 500px) and (min-width: 320px){
   body{
@@ -391,7 +449,32 @@ body {
 
 }
 
+
+@media screen and (max-width: 425px){
+  .btn-lojaGoogle{
+    width: 80px;
+    position: relative;
+    left: -8%;
+    bottom: 21vh;
+  }
+  
+  .btn-lojaApple{
+    width: 86px;
+    position: relative;
+    left: -8%;
+    bottom: 21vh;
+  }
+}
+
+
+/*Formato MOBILE*/
+
+
 @media screen and (max-width: 375px){
+  #menu-mobile{
+    margin-right: 25px;
+  }
+
   .btn-painel-principal{
     top: 16vh;
     left: -85px;
@@ -475,61 +558,5 @@ body {
 }
 
 
-/*Formato Monitor 1326px*/
-@media only screen and (max-width: 1326px) and (min-width:1326px){
-  .btn-painel-principal{
-    position: relative;
-    top: 440px;
-    left: 270px;
-  }
 
-  .btn-lojaGoogle {
-    bottom: 450px;
-    left: 370px;
-  }
 
-  .btn-lojaApple {
-    bottom: 450px;
-    left: 380px;
-  }
-
-}
-
-/*Formato Monitor 1280px*/
-@media only screen and (max-width: 1280px) and (min-width:1280px){
-  .btn-painel-principal{
-    position: relative;
-    top: 410px;
-    left: 255px;
-  }
-
-  .btn-lojaGoogle {
-    bottom: 430px;
-    left: 355px;
-  }
-
-  .btn-lojaApple {
-    bottom: 430px;
-    left: 355px;
-  }
-
-}
-
-@media only screen and (max-width: 1880px) and (min-width:1880px){
-  .btn-painel-principal{
-    position: relative;
-    top: 550px;
-    left: 380px;
-  }
-
-  .btn-lojaGoogle {
-    bottom: 600px;
-    left: 520px;
-  }
-
-  .btn-lojaApple {
-    bottom: 600px;
-    left: 520px;
-  }
-  
-}
