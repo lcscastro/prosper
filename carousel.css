@@ -273,11 +273,13 @@ body {
   }
 
   .btn-lojaGoogle {
+    width: 160px;
     bottom: 450px;
     left: 370px;
   }
 
   .btn-lojaApple {
+    width: 173px;
     bottom: 450px;
     left: 380px;
   }
