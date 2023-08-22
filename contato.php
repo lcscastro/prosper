@@ -10,6 +10,7 @@ INCLUDE_ONCE './config.php';
     <meta name="description" content="">
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Hugo 0.111.3">
+    <link rel="icon" type="image/x-icon" href="./img/favicon_prosper.png">
     <title>Prosper Individualização de Água e Gás</title>
     <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/carousel/">
     <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/checkout/">
