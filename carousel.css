@@ -326,12 +326,12 @@ body {
 
 .btn-lojaGoogle{
   left: 280px;
-  width: 160px;
+  width: 132px;
   bottom: 345px;
 }
 .btn-lojaApple{
   left: 280px;
-  width: 170px;
+  width: 142px;
   bottom: 345px;
 }
 
@@ -452,17 +452,17 @@ body {
 
 @media screen and (max-width: 425px){
   .btn-lojaGoogle{
-    width: 80px;
+    width: 68px;
     position: relative;
-    left: -8%;
-    bottom: 21vh;
+    left: -5%;
+    bottom: 16vh;
   }
   
   .btn-lojaApple{
-    width: 86px;
+    width: 76px;
     position: relative;
-    left: -8%;
-    bottom: 21vh;
+    left: -5%;
+    bottom: 16vh;
   }
 }
 
