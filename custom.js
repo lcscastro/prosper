@@ -19,14 +19,17 @@
                         body: dadosForm
                     });
 
-                    const resposta = await dados.json();
+                    formCadMsgContato.reset();
+                    window.location.href = "index.html";
 
-                    if(resposta['status']){
-                        formCadMsgContato.reset();
-                        document.getElementById('msg'.innerHTML = resposta['msg']);
-                    }else{
-                        document.getElementById('msg'.innerHTML = resposta['msg']);
-                    }
+                    // const resposta = await dados.json();
+
+                    // if(resposta['status']){
+                    //     formCadMsgContato.reset();
+                    //     document.getElementById('msg'.innerHTML = resposta['msg']);
+                    // }else{
+                    //     document.getElementById('msg'.innerHTML = resposta['msg']);
+                    // }
                 });
               });
     });
