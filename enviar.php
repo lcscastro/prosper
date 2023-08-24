@@ -8,7 +8,7 @@ $dados = filter_input_array(INPUT_POST,FILTER_DEFAULT); //Receber dados do formu
 
 //Iniciar PHPMAILER e Configurações
 $mailer = new PHPMailer;
-$mailer->SMTPDebug = 1;
+// $mailer->SMTPDebug = 1;
 $mailer->Debugoutput = 'html';
 $mailer->setLanguage('pt');
 $mailer->isSMTP(); // funcao mailer para usar SMTP
