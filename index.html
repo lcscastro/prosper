@@ -88,7 +88,9 @@
       }
     </style>
     <link href="carousel.css" rel="stylesheet">
+    <link href="dialog.css" rel="stylesheet">
     <meta name="adopt-website-id" content="4b357630-3b6c-4f31-b5b7-9c7467e24575"/>
+    
   </head>
   <body> 
 <header data-bs-theme="light" class="d-flex flex-wrap justify-content-center py-2 mb-2 border-bottom">
@@ -132,11 +134,21 @@
   <div id="myCarousel" class="carousel slide" data-bs-ride="carousel" style="margin-bottom: 0px; margin-top: 70px;" >
     <div class="carousel-inner">
       <div class="carousel-item active">
-        <a class="btn btn-primary btn-lg btn-painel-principal" href="contato.php">Saiba Mais</a>
+        <!-- <a class="btn btn-primary btn-lg btn-painel-principal" href="contato.php">Saiba Mais</a> -->
+        <button id="btn-aviso" class="btn btn-primary btn-lg btn-painel-principal">Aviso de Recesso</button>
+        <dialog>
+          <h2>
+            Olá, Caro Cliente estaremos de recesso entre os dias 21/12 á 25/12 e nos dias 28/12 á 02/01.
+            Atenciosamente, Prosper.
+          </h2>
+          <button>Fechar</button>
+        </dialog>
         <img class="img-fluid bd-placeholder-img-lg" width="100%" height="80%" aria-hidden="true" focusable="false"="100%" src="img/BannerPrincipal_site_prosper_1.png"/></img>
       </div> 
     </div>
   </div>
+
+ 
 
   <!-- Marketing messaging and featurettes
   ================================================== -->
@@ -260,5 +272,6 @@
 <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
 <script src="//tag.goadopt.io/injector.js?website_code=4b357630-3b6c-4f31-b5b7-9c7467e24575" 
 class="adopt-injector"></script>
+<script src="dialog.js"></script>
   </body>
 </html>
