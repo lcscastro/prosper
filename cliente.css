@@ -29,6 +29,13 @@ h1,h2{
   margin-top: 20%;
 }
 
+@media only screen and (min-width: 501px) and (max-width: 761px){
+  .area-cliente{
+    margin-top: 5%;
+    margin-bottom: 5%;
+  }
+}
+
 
 
 .espaco-cliente-linha{
@@ -59,10 +66,33 @@ h1,h2{
   }
 }
 
+@media only screen and (min-width: 1463px) and (max-width: 2560px){
+  .btn-cliente{
+    font-size: x-large;
+    height: 50px;
+    width: 280px;
+  }
+}
+
+@media only screen and (max-width: 1440px){
+  .btn-cliente{
+    font-size: x-large;
+    height: 50px;
+    width: 280px;
+  }
+}
+
 @media only screen and (max-width: 1024px){
   .btn-cliente{
     font-size: x-large;
     height: 50px;
     width: 280px;
+  }
+}
+
+@media only screen and (min-width: 501px) and (max-width: 761px){
+  .btn-cliente{
+    margin-left: 25%;
+    margin-bottom: 5px;
   }
 }

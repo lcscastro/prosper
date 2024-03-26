@@ -9,7 +9,10 @@
     <title>Prosper Individualização de Água e Gás</title>
     <link rel="icon" type="image/x-icon" href="./img/favicon_prosper.png">
     <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/carousel/">
-    <link href="normalizze.css" rel="stylesheet">
+    <!-- Carrega style após render da pagina -->
+    <link rel="preload" href="normalizze.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="normalizze.css"></noscript>
+    <!-- // -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css'>
@@ -88,7 +91,7 @@
       }
     </style>
     <link href="carousel.css" rel="stylesheet">
-    <link href="dialog.css" rel="stylesheet">
+    <!-- <link href="dialog.css" rel="stylesheet"> APENAS PARA AVISO DE RECESSO-->
     <meta name="adopt-website-id" content="4b357630-3b6c-4f31-b5b7-9c7467e24575"/>
     
   </head>
@@ -143,12 +146,13 @@
           </h2>
           <button>Fechar</button>
         </dialog> -->
-        <img class="img-fluid bd-placeholder-img-lg" width="100%" height="80%" aria-hidden="true" focusable="false"="100%" src="img/BannerPrincipal_site_prosper_1.png"/></img>
+        <picture>
+          <source type="image/webp" srcset="img-reduzida/BannerPrincipal_site_prosper_1.webp"/> 
+          <img class="img-fluid bd-placeholder-img-lg" width="100%" height="80%" aria-hidden="true" focusable="false"="100%" src="img/BannerPrincipal_site_prosper_1.png" alt="imagem com um fundo gradiente azul e vermelho com um predio ao lado esquerdo da imagem e um texto ao lado direito, no texto diz Tome a melhor decisão para o seu condominio. Individualize com a prosper"/></img>
+        </picture>
       </div> 
     </div>
   </div>
-
- 
 
   <!-- Marketing messaging and featurettes
   ================================================== -->
@@ -165,19 +169,31 @@
     <!-- Three columns of text below the carousel -->
     <div class="row">
         <div class="col-lg-3" style="text-align: center;">
-        <img class="img-fluid" src="./img/icone_1.png" style="margin-bottom: 20px;" width="140" height="140"></i>
+          <picture>
+            <source type="image/webp" srcset="img-reduzida/icone_1.webp"/>
+            <img class="img-fluid" src="img/icone_1.png" style="margin-bottom: 20px;" width="140" height="140">
+          </picture>    
         <h2 class="fw-normal">Medição Indívidual <br>de Água e Gás</br></h2>
       </div><!-- /.col-lg-4 -->
       <div class="col-lg-3" style="text-align: center;">
-        <img class="img-fluid" src="./img/icone_2.png" style="margin-bottom: 20px;" width="140" height="140"></i>
+        <picture>
+          <source type="image/webp" srcset="img-reduzida/icone_2.webp"/>
+          <img class="img-fluid" src="img/icone_2.png" style="margin-bottom: 20px;" width="140" height="140">
+        </picture>
         <h2 class="fw-normal">Aplicativo Prosper</h2>
       </div><!-- /.col-lg-4 -->
       <div class="col-lg-3" style="text-align: center;">
-        <img class="img-fluid" src="./img/icone_3.png" style="margin-bottom: 20px;" width="140" height="140"></i>
+        <picture>
+          <source type="image/webp" srcset="img-reduzida/icone_3.webp"/>
+          <img class="img-fluid" src="img/icone_3.png" style="margin-bottom: 20px;" width="140" height="140">
+        </picture>
         <h2 class="fw-normal">iot Leituras Diárias</h2>
       </div><!-- /.col-lg-4 -->
       <div class="col-lg-3" style="text-align: center;">
-        <img class="img-fluid" src="./img/icone_4.png" style="margin-bottom: 20px;" width="140" height="140"></i>
+        <picture>
+          <source type="image/webp" srcset="img-reduzida/icone_4.webp"/>
+          <img class="img-fluid" src="img/icone_4.png" style="margin-bottom: 20px;" width="140" height="140">
+        </picture>
         <h2 class="fw-normal img-4-diferente">Alertas Personalizados</h2>
       </div><!-- /.col-lg-4 -->
     </div><!-- /.row -->
@@ -197,7 +213,11 @@
         <p><a class="btn btn-primary btn-lg btn-painel-telemetria" href="telemetria.html">Saiba Mais</a></p>
         </div>
       <div class="col-md-5 order-md-1">
-        <img class="bd-placeholder-img-lg featurette-image img-fluid mx-auto" src="img/banner_telemetria_tela_principal.png" style="margin-bottom: 20px;" width="500" height="500"></i>
+
+        <picture>
+          <source type="image/webp" srcset="img-reduzida/banner_telemetria_tela_principal.webp"/> 
+          <img class="bd-placeholder-img-lg featurette-image img-fluid mx-auto" src="img/banner_telemetria_tela_principal.png" style="margin-bottom: 20px;" width="500" height="500" alt="Imagem com um predio com um fundo circular com uma cor gradiente azul e vermelha de fundo"></i>
+        </picture>
       </div>
     </div>
   </div><!-- /.container -->
@@ -208,7 +228,10 @@
 
       <div class="carousel-inner">
         <div class="carousel-item active">
-          <img class="bd-placeholder-img img-fluid" width="100%" height="100%" aria-hidden="true" focusable="false"="100%" height="100%" src="img/BannerPrincipal_site_prosper_2.png"/></img>
+          <picture>
+            <source type="image/webp" srcset="img-reduzida/BannerPrincipal_site_prosper_2.webp"/> 
+            <img class="img-fluid bd-placeholder-img-lg" width="100%" height="80%" aria-hidden="true" focusable="false"="100%" src="img/BannerPrincipal_site_prosper_2.png"/></img>
+          </picture>
           <a href='https://play.google.com/store/apps/details?id=br.com.prosperservice.cliente&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1' target="_blank"><img class="btn-lojaGoogle img-fluid" alt='Disponível no Google Play' src='https://play.google.com/intl/pt-BR/badges/static/images/badges/pt-br_badge_web_generic.png'/></a>
           <a href='https://apps.apple.com/br/app/prosper/id1588651545' target="_blank"><img class="btn-lojaApple img-fluid" alt='Disponível na app store' src='./img/App-store-badge.png'/></a>
         </div> 
@@ -233,7 +256,10 @@
             </ul>
             </div>
           <div class="col-md-5 order-md-1">
-            <img class="bd-placeholder-img-lg featurette-image img-fluid mx-auto" src="img/banner_predio_Beneficios_da_Individualizacao_tela_principal.png" width="500" height="500"></i>
+            <picture>
+              <source type="image/webp" srcset="img-reduzida/banner_predio_Beneficios_da_Individualizacao_tela_principal.webp"/> 
+              <img class="img-fluid bd-placeholder-img-lg" width="100%" height="80%" aria-hidden="true" focusable="false"="100%" src="img/banner_predio_Beneficios_da_Individualizacao_tela_principal.png"/></img>
+            </picture>
           </div>
         </div>
       </div><!-- /.container -->
