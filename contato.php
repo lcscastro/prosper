@@ -139,7 +139,11 @@ INCLUDE_ONCE './config.php';
     </header>
     <div class="row area-form">
       <div class="col-md-6"> <!--col-md-8 -->
-       <img class="img-contato img-fluid" src="./img/banner_pag_orcamento.png">
+      <picture>
+          <source type="image/webp" srcset="img-reduzida/banner_pag_orcamento.webp"/> 
+          <img class="img-contato img-fluid" src="./img/banner_pag_orcamento.png">        
+        </picture>
+       
      </div>
 
       <div class="col-md-4 col-lg-6" id="kit-form">
