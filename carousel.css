@@ -559,6 +559,16 @@ body {
 
 }
 
+.whats {
+ position: fixed;
+ bottom: 15px;
+ right: 15px;
+ z-index: 9999;
+ box-shadow: #25246b 1px 1px 1px;
+ border-radius: 100%;
+ 
+}
+
 
 
 
