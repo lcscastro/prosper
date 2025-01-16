@@ -20,19 +20,19 @@ $mailer->SMTPOptions = array( //SEM SSL
     )
 );
 
-$mailer->Host = '191.252.87.128'; //Aguardar futuro erro - testar depois com smtp.comtidev.com.br
+$mailer->Host = 'smtp.hostinger.com.br'; //Aguardar futuro erro - testar depois com smtp.comtidev.com.br
 $mailer->SMTPAuth = true;// Habilita a autenticação do form - NORMAL TRUE
-$mailer->Username = 'dev@comtidev.com.br'; // Conta de e-mail que realizará o envio
-$mailer->Password = 'Com@ti0615'; // Senha da conta de e-mail
+$mailer->Username = 'ti@castroalvescontabilidade.com.br'; // Conta de e-mail que realizará o envio
+$mailer->Password = '%Edadi!789!'; // Senha da conta de e-mail
 $mailer->SMTPSecure = false; //Desativada Segurança
 $mailer->SMTPAutoTLS = false;
-$mailer->Port = 587;// Porta de conexão
+$mailer->Port = 465;// Porta de conexão
 
 // email do destinatario
 $address = "atendimento@prosperservice.com.br";
 
 $mailer->From = 'dev@comtidev.com.br';             //Obrigatório ser a mesma caixa postal indicada em "username"
-$mailer->Sender = 'dev@comtidev.com.br';
+$mailer->Sender = 'ti@castroalvescontabilidade.com.br';
 $mailer->FromName = "Contato - SITE Prosper";          // seu nome
 $mailer->Subject = "Contato - SITE Prosper";             // assunto da mensagem
 $mailer->addAddress($address, "destinatario"); 
