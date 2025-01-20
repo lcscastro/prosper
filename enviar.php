@@ -1,58 +1,61 @@
 ﻿<?php
 include_once './config.php';
-require 'PHPMailerAutoload.php';
-require 'class.phpmailer.php';
 
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\SMTP;
+use PHPMailer\PHPMailer\Exception;
+
+//Load Composer's autoloader
+require 'vendor/autoload.php';
 
 $dados = filter_input_array(INPUT_POST,FILTER_DEFAULT); //Receber dados do formulario
 
-//Iniciar PHPMAILER e Configurações
-$mailer = new PHPMailer;
-// $mailer->SMTPDebug = 1;
-$mailer->Debugoutput = 'html';
-$mailer->setLanguage('pt');
-$mailer->isSMTP(); // funcao mailer para usar SMTP
-$mailer->SMTPOptions = array( //SEM SSL
-		'ssl' => array(
-        'verify_peer' => false,
-        'verify_peer_name' => false,
-        'allow_self_signed' => true
-    )
-);
+//Create an instance; passing `true` enables exceptions
+$mail = new PHPMailer(true);
 
-$mailer->Host = 'smtp.hostinger.com.br'; //Aguardar futuro erro - testar depois com smtp.comtidev.com.br
-$mailer->SMTPAuth = true;// Habilita a autenticação do form - NORMAL TRUE
-$mailer->Username = 'ti@castroalvescontabilidade.com.br'; // Conta de e-mail que realizará o envio
-$mailer->Password = '%Edadi!789!'; // Senha da conta de e-mail
-$mailer->SMTPSecure = false; //Desativada Segurança
-$mailer->SMTPAutoTLS = false;
-$mailer->Port = 465;// Porta de conexão
+try {
+  //Server settings
+  $mail->SMTPDebug = SMTP::DEBUG_SERVER;                      //Enable verbose debug output
+  $mail->SMTPDebug = 1;
+  $mail->isSMTP();                                            //Send using SMTP
+  $mail->Host       = 'sandbox.smtp.mailtrap.io';                     //Set the SMTP server to send through
+  $mail->SMTPAuth   = true;                                   //Enable SMTP authentication
+  $mail->Username   = 'e5028e5d2aaff8';                     //SMTP username
+  $mail->Password   = '11467e97757565';                               //SMTP password
+  $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;            //Enable implicit TLS encryption
+  $mail->Port       = 465;                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
+  $mail->setLanguage('pt');
+  $mail->CharSet = 'utf8';
 
-// email do destinatario
-$address = "atendimento@prosperservice.com.br";
+  //Recipients
+  $mail->setFrom('ti@castroalvescontabilidade.com', 'WEB Prosper Service');
+  $mail->addAddress('info@teste.com.br');
+  /*
+  $mail->addAddress('atendimento@prosperservice.com.br', 'Atendimento Prosper');     //Add a recipient
+  $mail->addAddress('contato@prosperservice.com.br');               //Name is optional
+  //$mail->addReplyTo('info@example.com', 'Information');
+  //$mail->addCC('cc@example.com');
+  */
 
-$mailer->From = 'dev@comtidev.com.br';             //Obrigatório ser a mesma caixa postal indicada em "username"
-$mailer->Sender = 'ti@castroalvescontabilidade.com.br';
-$mailer->FromName = "Contato - SITE Prosper";          // seu nome
-$mailer->Subject = "Contato - SITE Prosper";             // assunto da mensagem
-$mailer->addAddress($address, "destinatario"); 
-$mailer->addCC('contato@prosperservice.com.br', 'Copia');
+  /*Attachments
+  $mail->addAttachment('/var/tmp/file.tar.gz');         //Add attachments
+  $mail->addAttachment('/tmp/image.jpg', 'new.jpg');    //Optional name */
+
+  //Content
+  $mail->isHTML(true);                                  //Set email format to HTML
+  $mail->Subject = 'Contato - Site Prosper';
+  $mail->Body    = "<strong>Nome:</strong>".$dados['nome']."<br><strong>Contato:</strong>".$dados['contato']."<br><strong>Email:</strong>".$dados['email']."<br><strong>Endereço:</strong>".$dados['endereco']."<br><strong>Cidade:</strong>".$dados['cidade']."<br><strong>Estado:</strong>".$dados['estado']."<br><strong>CEP:</strong>".$dados['cep']."<br><strong>Condominio:</strong>".$dados['condominio']."<br><strong>Administradora:</strong>".$dados['administradora']."<br><strong>Perfil:</strong>".$dados['perfil']."<br><strong>Mensagem:</strong>".$dados['mensagem']."<br>";
+  //$mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
+
+  $mail->send();
+  echo 'E-Mail enviado com sucesso';
+} catch (Exception $e) {
+  echo "Erro no envio do email. Error: {$mail->ErrorInfo}";
+}
 
 //ENVIO SEM VALIDAÇÃO TOTAL
-  $corpoMSG = "<strong>Nome:</strong>".$dados['nome']."<br><strong>Contato:</strong>".$dados['contato']."<br><strong>Email:</strong>".$dados['email']."<br><strong>Endereço:</strong>".$dados['endereco']."<br><strong>Cidade:</strong>".$dados['cidade']."<br><strong>Estado:</strong>".$dados['estado']."<br><strong>CEP:</strong>".$dados['cep']."<br><strong>Condominio:</strong>".$dados['condominio']."<br><strong>Administradora:</strong>".$dados['administradora']."<br><strong>Perfil:</strong>".$dados['perfil']."<br><strong>Mensagem:</strong>".$dados['mensagem']."<br>";
-  // $mailer->MsgHTML($corpoMSG);
-  $mailer->MsgHTML(utf8_decode($corpoMSG));
-  if(!$mailer->send()) {
-    echo 'Não foi possível enviar a mensagem.<br>';
-    echo 'Erro: ' . $mailer->ErrorInfo;
-} else {
-    print 'Mensagem enviada.';
-}
-  
-  
-  exit();
-  $retorna = ['status' => true, 'msg' => "Mensagem Enviada com sucesso!"];
-  return json_encode($retorna);
+  //$corpoMSG = "<strong>Nome:</strong>".$dados['nome']."<br><strong>Contato:</strong>".$dados['contato']."<br><strong>Email:</strong>".$dados['email']."<br><strong>Endereço:</strong>".$dados['endereco']."<br><strong>Cidade:</strong>".$dados['cidade']."<br><strong>Estado:</strong>".$dados['estado']."<br><strong>CEP:</strong>".$dados['cep']."<br><strong>Condominio:</strong>".$dados['condominio']."<br><strong>Administradora:</strong>".$dados['administradora']."<br><strong>Perfil:</strong>".$dados['perfil']."<br><strong>Mensagem:</strong>".$dados['mensagem']."<br>";
+
 //VALIDAÇÃO CAPTCHA
 
 if(isset($dados['sitekey'])){
@@ -70,21 +73,6 @@ if(isset($dados['sitekey'])){
 
     $dados_recaptcha = json_decode($resposta);
 }
-
-
-/* if($dados_recaptcha->success){
-
-  $corpoMSG = "<strong>Nome:</strong>".$dados['nome']."<br><strong>Contato:</strong>".$dados['contato']."<br><strong>Email:</strong>".$dados['email']."<br><strong>Endereço:</strong>".$dados['endereco']."<br><strong>Cidade:</strong>".$dados['cidade']."<br><strong>Estado:</strong>".$dados['estado']."<br><strong>CEP:</strong>".$dados['cep']."<br><strong>Condominio:</strong>".$dados['condominio']."<br><strong>Administradora:</strong>".$dados['administradora']."<br><strong>Perfil:</strong>".$dados['perfil']."<br><strong>Mensagem:</strong>".$dados['mensagem']."<br>";
-  $mailer->MsgHTML(utf8_decode($corpoMSG));
-  $mailer->Send();                            
-  $retorna = ['status' => true, 'msg' => "Mensagem Enviada com sucesso!"];
-  echo json_encode($retorna);
-  header("Location: index.html");
- } else {
-$retorna = ['status' => false, 'msg' => "ERRO: Identificado tentativa de email com bot!"];
-echo json_encode($retorna);
-}
-*/
 
 ?>
 
