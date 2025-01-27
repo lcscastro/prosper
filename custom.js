@@ -19,8 +19,10 @@
                         body: dadosForm
                     });
 
-                    formCadMsgContato.reset();
-                    window.location.href = "index.html";
+                    await delay(3000);
+                    formCadMsgContato.reset(); //Resetar Formulario
+                    window.location.href = "index.html"; //Enviar para o Index
+                
 
                     // const resposta = await dados.json();
 
