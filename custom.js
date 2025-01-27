@@ -18,11 +18,10 @@
                         method: "POST",
                         body: dadosForm
                     });
-
-                    await delay(3000);
+                    
+                    //await delay(3000);
                     formCadMsgContato.reset(); //Resetar Formulario
                     window.location.href = "index.html"; //Enviar para o Index
-                
 
                     // const resposta = await dados.json();
 
@@ -35,4 +34,5 @@
                 });
               });
     });
+    
 }
