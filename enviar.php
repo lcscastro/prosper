@@ -27,7 +27,7 @@ try {
 
   //Recipients
   $mail->setFrom('contato@prosperservice.com.br', 'Formulário Prosper Service');
-  $mail->addAddress('contato.luctech@outlook.com', 'Dev Teste'); 
+  //$mail->addAddress('contato.luctech@outlook.com', 'Dev Teste');
   $mail->addAddress('atendimento@prosperservice.com.br', 'Atendimento Prosper');     //Add a recipient
   $mail->addAddress('contato@prosperservice.com.br', 'Contato Prosper');               //Name is optional
   //$mail->addReplyTo('info@example.com', 'Information');
@@ -40,7 +40,9 @@ try {
   //Content
   $mail->isHTML(true);                                  //Set email format to HTML
   $mail->Subject = 'Solicitação de Orçamento - Site Prosper';
-  $mail->Body    = "<strong>Solicitação de Orçamento atráves do site Prosper</strong> <br> <strong>Nome:</strong>".$dados['nome']."<br><strong>Contato:</strong>".$dados['contato']."<br><strong>Email:</strong>".$dados['email']."<br><strong>Endereço:</strong>".$dados['endereco']."<br><strong>Cidade:</strong>".$dados['cidade']."<br><strong>Estado:</strong>".$dados['estado']."<br><strong>CEP:</strong>".$dados['cep']."<br><strong>Condominio:</strong>".$dados['condominio']."<br><strong>Administradora:</strong>".$dados['administradora']."<br><strong>Perfil:</strong>".$dados['perfil']."<br><strong>Mensagem:</strong>".$dados['mensagem']."<br>";
+  $txtMSG    = "<strong>Solicitação de Orçamento atráves do site Prosper</strong> <br> <strong>Nome:</strong>".$dados['nome']."<br><strong>Contato:</strong>".$dados['contato']."<br><strong>Email:</strong>".$dados['email']."<br><strong>Endereço:</strong>".$dados['endereco']."<br><strong>Cidade:</strong>".$dados['cidade']."<br><strong>Estado:</strong>".$dados['estado']."<br><strong>CEP:</strong>".$dados['cep']."<br><strong>Condominio:</strong>".$dados['condominio']."<br><strong>Administradora:</strong>".$dados['administradora']."<br><strong>Perfil:</strong>".$dados['perfil']."<br><strong>Mensagem:</strong>".$dados['mensagem']."<br>";
+  // $mail->Body = (utf8_decode($txtMSG));
+  $mail->Body = ($txtMSG);
   //$mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
 
   $mail->send();
