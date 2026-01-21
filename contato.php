@@ -138,10 +138,13 @@ INCLUDE_ONCE './config.php';
       
     </header>
     <div class="row area-form">
-      <div class="col-md-6"> <!--col-md-8 -->
+      <!--col-md-8 -->
+      <!-- <div class="col-md-6">  -->
+        <div class="col-md-3">
       <picture>
-          <source type="image/webp" srcset="img-reduzida/banner_pag_orcamento.webp"/> 
-          <img class="img-contato img-fluid" src="./img/banner_pag_orcamento.png">        
+          <source type="image/webp" srcset=""/> 
+          <!-- <img class="img-contato img-fluid" src="./img/banner_pag_orcamento.png">         -->
+          <img class="img-fluid" src="./img/"> 
         </picture>
        
      </div>
@@ -233,7 +236,7 @@ INCLUDE_ONCE './config.php';
               </div>
             </div>
 
-          <div class="col-sm-3">
+          <div class="col-sm-4">
             <label for="cep" class="form-label">CEP</label>
             <input type="text" class="form-control" name="cep" id="cep" placeholder="" required>
             <div class="invalid-feedback">
@@ -246,7 +249,7 @@ INCLUDE_ONCE './config.php';
             <input type="text" class="form-control" name="condominio" id="condominio" placeholder="">
           </div>
 
-          <div class="col-sm-5">
+          <div class="col-sm-6">
             <label for="administradora" class="form-label">Nome do administradora</label>
             <input type="text" class="form-control" name="administradora" id="administradora" placeholder="">
           </div>
