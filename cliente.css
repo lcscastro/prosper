@@ -1,166 +1,194 @@
-/* Importação da fonte Inter Thin (peso 100) do Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400&display=swap');
+/* --- Importação da Fonte Inter --- */
+@font-face {
+  font-family: 'Inter';
+  src: url('assets_2026/Inter-VariableFont_slnt,wght.ttf') format('truetype');
+  font-weight: 100 900;
+  font-style: normal;
+}
 
+/* --- Configuração do Background de Página Inteira --- */
 body {
-  /* Define a fonte Inter e o peso 100 (Thin) como padrão */
   font-family: 'Inter', sans-serif;
-  font-weight: 400; 
-}
-
-/* Garante que títulos e outros elementos herdem ou mantenham o estilo Thin se desejado */
-h1, h2, h3, h4, h5, h6, p, span, div, a, li {
-  font-family: 'Inter', sans-serif;
-  font-weight: 100;
-}
-
-.pricing-header {
-  margin-top: 5%;
-  max-width: 700px;
-}
-
-.div-cliente{
-  justify-content: center;
-}
-
-h1,h2{
-  color: #be1522;
-}
-
-.caixa-cliente{
-  div{
-    padding: 0 0 0 0;
-  }
-}
-
-.area-cliente {
-  margin-top: 20%;
-}
-
-@media only screen and (min-width: 501px) and (max-width: 761px){
-  .area-cliente{
-    margin-top: 5%;
-    margin-bottom: 5%;
-  }
-}
-
-
-
-.espaco-cliente-linha{
+  font-weight: 300;
+  color: #5a5a5a;
+  
+  /* Caminho para a imagem de fundo solicitada */
+  /* Certifique-se que a pasta assets_2026 está na mesma raiz que o cliente.html */
+  background-image: url('assets_2026/background_tela_gestão.webp'); 
+  
+  background-size: cover;       /* Cobre toda a tela */
+  background-position: center;  /* Centraliza a imagem */
+  background-repeat: no-repeat; /* Não repete */
+  background-attachment: fixed; /* O fundo fica fixo ao fazer scroll */
+  
+  min-height: 100vh;
   display: flex;
-  text-decoration: none;
-  margin-bottom: 10px;
+  flex-direction: column;
 }
 
-.btn-cliente{
-  height: 63px;
-  width: 320px;
-  font-size: xx-large;
+/* --- Caixa Branca Centralizada (O "Card" do Layout) --- */
+.conteudo-box {
+  background-color: #ffffff; /* Fundo Branco Sólido */
+  border-radius: 30px;       /* Bordas arredondadas conforme o design moderno */
+  padding: 50px;             /* Espaçamento interno */
+  margin-top: 100px;         /* Espaço para não colar no topo/menu */
+  margin-bottom: 60px;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.15); /* Sombra suave para destacar do fundo */
+  
+  /* Largura máxima para não ficar demasiado largo em monitores grandes */
+  max-width: 1140px; 
+  width: 95%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.btn-cliente:hover{
-  background-color: #be1522;
+/* --- Ajuste de Tipografia Básica --- */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Inter', sans-serif;
+  color: #000;
+}
+.text-destaque-header {
+  color: #000;
+  font-weight: 600;
+  font-size: 2.5rem;
+  line-height: 1.1;
 }
 
-.img-cliente{
-  max-width: 100%;
+.text-sub-header {
+  font-weight: 300;
+  font-size: 2.5rem;
+  line-height: 1.1;
+  color: #6c757d;
+}
+
+.titulo-vermelho {
+  color: #be1522;
+  font-weight: 500;
+  font-size: 1.75rem;
+  line-height: 1.2;
+}
+
+/* --- Layout da Área do Cliente --- */
+.marketing {
+  margin-top: 60px;
+}
+
+/* --- 2. Caixa Branca Centralizada (O "Card" do PDF) --- */
+.conteudo-box {
+  background-color: rgba(0, 0, 0, .2); /* Fundo branco levemente transparente */
+  border-radius: 30px; /* Bordas arredondadas como no PDF */
+  padding: 50px;
+  margin-top: 80px; /* Espaço do topo */
+  margin-bottom: 50px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.2); /* Sombra suave para destacar do fundo */
+  
+  /* Limita a largura para não ficar muito esticado em telas grandes */
+  max-width: 1100px; 
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.featurette-divider {
+  margin: 4rem 0;
+  border-top: 1px solid #eee;
+}
+
+/* --- Ícones de Funcionalidades --- */
+.icon-row {
+  margin-top: 3rem;
+}
+
+.icon-box {
+  text-align: center;
+  padding: 0 10px;
+}
+
+.icon-box img {
+  width: 180px;
   height: auto;
-}
-
-
-@media only screen and (max-width: 1440px) and (min-width:1060px){
-  .botao-cliente{
-    margin-left: 125px;
-  }
-}
-
-@media only screen and (min-width: 1463px) and (max-width: 2560px){
-  .btn-cliente{
-    font-size: x-large;
-    height: 50px;
-    width: 280px;
-  }
-}
-
-@media only screen and (max-width: 1440px){
-  .btn-cliente{
-    font-size: x-large;
-    height: 50px;
-    width: 280px;
-  }
-}
-
-@media only screen and (max-width: 1024px){
-  .btn-cliente{
-    font-size: x-large;
-    height: 50px;
-    width: 280px;
-  }
-}
-
-@media only screen and (min-width: 501px) and (max-width: 761px){
-  .btn-cliente{
-    margin-left: 25%;
-    margin-bottom: 5px;
-  }
-}
-
-/* Adições para a nova estrutura baseada no PDF */
-
-.text-destaque {
-  color: #111111;
-  font-weight: bold;
-  opacity: 1;
-}
-
-.img-icone {
-  max-width: 60px; /* Ajuste o tamanho dos ícones conforme necessário */
-  height: auto;
+  margin-bottom: 15px;
   transition: transform 0.2s;
 }
 
-.img-icone:hover {
+.icon-box img:hover {
   transform: scale(1.1);
 }
 
-.list-group-item {
-  border: none;
-  padding-left: 0;
-  font-weight: 500;
-  color: #555;
-}
-
-/* Ajuste fino para o card de atendimento */
-.card {
-  border-radius: 15px;
-}
-
-.btn-success {
-  background-color: #25D366; /* Cor oficial do WhatsApp */
-  border-color: #25D366;
+.icon-label {
+  font-size: 0.9rem;
   font-weight: 600;
+  color: #333;
+  line-height: 1.2;
 }
 
-.btn-success:hover {
-  background-color: #128C7E;
-  border-color: #128C7E;
+/* --- Card de Atendimento --- */
+.card-atendimento {
+  background-color: #f8f9fa;
+  border: 1px solid #eee;
+  border-radius: 20px;
+  padding: 2.5rem;
+  text-align: center;
+  height: 100%;
 }
 
-/* Ajustes de responsividade para a margem superior */
-.container.area-cliente {
-  margin-top: 100px; /* Espaço para o menu fixo */
+.btn-whatsapp {
+  background-color: #25d366;
+  color: white;
+  font-weight: 600;
+  border-radius: 50px;
+  padding: 10px 25px;
+  border: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin: 20px 0;
+  text-decoration: none;
+  font-size: 1.1rem;
+  transition: background-color 0.3s;
 }
 
-@media (max-width: 768px) {
-  .container.area-cliente {
-    margin-top: 120px;
-  }
-  
-  .featurette-heading {
-    font-size: 1.8rem;
+.btn-whatsapp:hover {
+  background-color: #128c7e;
+  color: white;
+}
+
+/* --- Lista de Cadastro --- */
+.lista-cadastro li {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  font-weight: 500;
+}
+
+.lista-cadastro i {
+  color: #be1522;
+  margin-right: 10px;
+  font-size: 1.2rem;
+}
+
+/* --- Footer --- */
+.rodape-fundo {
+  background-color: rgba(51, 51, 51, 0.95); /* Fundo escuro com leve transparência */
+  color: white;
+  margin-top: auto; /* Empurra o footer para o final */
+  padding: 20px 0;
+}
+
+.rodape-texto a {
+  color: #ccc;
+  text-decoration: none;
+}
+
+.rodape-texto a:hover {
+  color: white;
+}
+
+/* Responsividade */
+@media (min-width: 992px) {
+  .marketing .col-lg-4 {
+    margin-bottom: 1.5rem;
     text-align: center;
-  }
-  
-  .col-4 p {
-    font-size: 0.8rem; /* Texto menor para os ícones no mobile */
   }
 }

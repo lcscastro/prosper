@@ -137,19 +137,29 @@ INCLUDE_ONCE './config.php';
       </nav>
       
     </header>
-    <div class="row area-form">
-      <!--col-md-8 -->
-      <!-- <div class="col-md-6">  -->
-        <div class="col-md-3">
-      <picture>
-          <source type="image/webp" srcset=""/> 
-          <!-- <img class="img-contato img-fluid" src="./img/banner_pag_orcamento.png">         -->
-          <img class="img-fluid" src="./img/"> 
-        </picture>
-       
-     </div>
 
-      <div class="col-md-4 col-lg-6" id="kit-form">
+    <main>
+
+    <div class="row area-form" style="padding-top: 85px;">
+      <div class="row">    
+        <div class="col-md">
+        <h2> Seu Controle começa<br> por aqui. Preencha o formulário e faça o <br> seu orçamento. <h2>
+       <picture>  
+          <source type="image/webp" srcset="./assets_2026/bg_orcamento.webp"/>
+          <img class="img-contato" src="./assets_2026/bg_orcamento.webp">        
+        </picture>
+        </div>
+
+     <div class="row">
+     <div class="col-md-12">
+        <button class="btn btn-primary btn-lg" type="submit" name="btn-vazio" id="btn-vazio" style="margin-left: 1250px;">Orçamentos</button>
+        <h2 class="titulo-h2" style="margin-left: 650px;padding-top: 0px; padding-bottom: 0px;">Quero um orçamento para me <br> tornar um cliente <span>Pros</span><span>per</span></h2>
+     </div>
+     </div>
+    </div>
+
+
+      <div class="col-md-8 col-lg-6" id="kit-form" style="margin-left: 350px;"> <!-- Formulário -->
         <h2 class="titulo-h2">Seja um cliente <span>Pros</span><span>per</span></h2>
         
         <form class="needs-validation" method="POST" id="form-contato" name="form-contato">
@@ -278,7 +288,7 @@ INCLUDE_ONCE './config.php';
         </form>
       </div>
     </div>
-  <main>
+  
 
  <!-- FOOTER -->
  <div class="container-fluid rodape-fundo">
