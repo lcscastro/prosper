@@ -140,33 +140,30 @@ INCLUDE_ONCE './config.php';
 
     <main>
 
-    <div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-light" style="padding: 0rem!important;">
-    <picture>  
+    <div class="banner-wrapper bg-light">
+      <picture>  
           <source type="image/webp" srcset="./assets_2026/bg_orcamento.webp"/>
-          <img class="img-fluid img-contato" src="./assets_2026/bg_orcamento.webp" >        
-        </picture>
+          <img class="img-fluid img-contato" src="./assets_2026/bg_orcamento.webp" alt="Banner Orçamento">        
+      </picture>
+      <div class="texto-sobreposto">
+        <h1 class="display-4 fw-normal"><b>Seu controle começa<br> por aqui.</b> Preencha o <br> formulário e faça seu <br> orçamento.</h1>
+      </div>
 
-    <div class="position-relative col-md-5 p-lg-5 mx-auto my-5">
-      <h1 class="display-4 fw-normal">Seu controle começa<br> por aqui. Preencha o formulário e faça <br> seu orçamento.</h1>
-    </div>
-    </div>
-    <div class="product-device shadow-sm d-none d-md-block"></div>
-    <div class="product-device product-device-2 shadow-sm d-none d-md-block"></div>
-  </div>
+      <button class="btn btn-primary btn-lg btn-orcamento-flutuante" type="button" name="btn-vazio" id="btn-vazio">
+        Orçamentos
+      </button>
 
-    <div class="row area-form" style="padding-top: 85px;">
-      <div class="row">    
-        <div class="col-md">
-        
-       
-
-     <div class="row">
-     <div class="col-md-12">
-        <button class="btn btn-primary btn-lg" type="submit" name="btn-vazio" id="btn-vazio" style="margin-left: 1250px;">Orçamentos</button>
-        <h2 class="titulo-h2" style="margin-left: 650px;padding-top: 0px; padding-bottom: 0px;">Quero um orçamento para me <br> tornar um cliente <span>Pros</span><span>per</span></h2>
-     </div>
-     </div>
     </div>
+
+    <div class="row">
+             <div class="col-md-12">
+                <h2 class="titulo-h2-a">
+                    Quero um orçamento para me <br> tornar um cliente <span>Pros</span><span>per</span>
+                </h2>
+             </div>
+         </div>
+    
+      
 
 
       <div class="col-md-8 col-lg-6" id="kit-form" style="margin-left: 350px;"> <!-- Formulário -->

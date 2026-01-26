@@ -16,7 +16,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .img-contato{
-  
+  margin-top: 105px;
+
 }
 
 .container {
@@ -25,6 +26,16 @@ h1, h2, h3, h4, h5, h6 {
 
 .titulo-h2{
   padding-top: 20px;
+}
+
+/* --- Estilo para o Título do Formulário --- */
+.titulo-h2-a {
+  text-align: center;       /* Centraliza o texto */
+  color: #818181;           /* Cor Cinza (baseado no padrão do site) */
+  font-weight: 700;         /* Fonte mais leve/fina (opcional, para ficar elegante) */
+  /*padding-top: 40px;        /* Espaço superior */
+  /*padding-bottom: 20px;     /* Espaço inferior */
+  
 }
 
 .btn-msg{
@@ -48,9 +59,118 @@ h1, h2, h3, h4, h5, h6 {
   margin-top: .5rem;
 }
 
+
+/* --- Novo CSS para o Banner com Texto Sobreposto --- */
+
+/* Garante que a imagem ocupe o espaço e o texto possa flutuar sobre ela */
+.banner-wrapper {
+  position: relative;
+  width: 100%;
+  /* overflow: hidden; */
+  padding: 0 !important; /* Remove paddings padrões do Bootstrap se necessário */
+  margin: 0 !important;
+  overflow: visible !important;
+}
+
+/* Estilo da imagem de fundo */
+.banner-wrapper img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover; /* Garante que a imagem cubra a área sem distorcer */
+  background-color: #fff;
+}
+
+/* O bloco de texto que flutua */
+.texto-sobreposto {
+  position: absolute;
+  top: 35%; /* Posiciona o topo do elemento no meio do container */
+  left: 10%; /* Posiciona a esquerda do elemento no meio */
+  transform: translateY(-50%); /* Ajuste fino para centralizar perfeitamente */
+  transform: translateX(-70%); /* Ajuste fino para centralizar perfeitamente */
+  width: 80%; /* Define uma largura para o texto não bater nas bordas */
+  z-index: 10; /* Garante que fique acima da imagem */
+  text-align: right; /* Texto alinhado a Esquerda*/
+  
+}
+
+/* Força a cor branca no título especificamente dentro do banner */
+.texto-sobreposto h1 {
+  color: #ffffff !important;
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7); /* Sombra escura para leitura */
+  font-weight: 700;
+  font-size: 2.5rem;
+  margin-bottom: 0;
+}
+
+/* --- ESTILOS DO BOTÃO FLUTUANTE (Novo) --- */
+
+.btn-orcamento-flutuante {
+  position: absolute;
+  bottom: 0;       /* Posiciona na base da imagem */
+  right: 20%;       /* Alinhado à direita (simétrico ao texto da esquerda) */
+  transform: translateY(-140%); /* Empurra % da altura para baixo (efeito borda) */
+  z-index: 20;     /* Garante que fique acima da imagem e do fundo branco */
+  
+  /* Estilo visual para destaque */
+  padding: 12px 60px !important;
+  font-weight: 600;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3); /* Sombra para profundidade */
+  border-radius: 50px; /* Ajuste conforme preferência */
+
+  /* --- Configuração do Degradê (Gradiente) --- */
+  
+  /* Ordem solicitada: #212529 (Cinza) -> #690a12 (Vinho) -> #be1522 (Vermelho Prosper) */
+  background: linear-gradient(90deg, #25246b 20%, #690a12 75%, #be1522 100%);
+  
+  /* Remove a borda azul padrão do Bootstrap */
+  border: none;
+  
+  /* Tipografia e Espaçamento */
+  color: #ffffff;
+  padding: 15px 50px; /* Botão mais largo e alto para destaque */
+  font-weight: 600;
+  text-transform: uppercase; /* Opcional: deixa tudo maiúsculo para mais impacto */
+  letter-spacing: 1px;       /* Espaçamento entre letras */
+  border-radius: 40px;        /* Bordas levemente arredondadas */
+  
+  /* Sombra para destacar do fundo (efeito 3D) */
+  box-shadow: 0 10px 20px rgba(105, 10, 18, 0.4); 
+  
+  /* Transição suave para o efeito de hover */
+  transition: all 0.3s ease;
+  
+}
+
+
+/* Ajuste para Mobile */
+@media only screen and (max-width: 768px) {
+  .btn-sobreposto-direita {
+    position: relative; /* No mobile, o botão volta ao fluxo normal para não atrapalhar */
+    transform: none;
+    width: 100%;
+    right: auto;
+    margin-top: -20px; /* Puxa um pouco para cima para conectar com a foto */
+  }
+}
+
+/* Ajuste Responsivo: Em celulares, centralizamos tudo de volta para ficar melhor na tela pequena */
+@media only screen and (max-width: 768px) {
+  .texto-sobreposto {
+    width: 90%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Volta a centralizar tudo no mobile */
+    text-align: center; /* Centraliza o texto no mobile */
+  }
+  
+  .texto-sobreposto h1 {
+    font-size: 1.5rem;
+  }
+}
+
 @media only screen and (max-width: 2400px){
   #kit-form{
-    margin-top: 110px
+    margin-top: 50px
   }
   }
 
@@ -78,5 +198,17 @@ h1, h2, h3, h4, h5, h6 {
 @media only screen and (max-width: 425px){
 #text-area-contato{
   width: 100%;
+}
+
+@media only screen and (max-width: 768px) {
+.btn-orcamento-flutuante {
+    position: relative; /* Remove o posicionamento absoluto no mobile */
+    transform: none;
+    bottom: auto;
+    right: auto;
+    display: block;
+    margin: -20px auto 20px auto; /* Margem negativa para puxar um pouco para cima */
+    width: 80%;
+  }
 }
 }
