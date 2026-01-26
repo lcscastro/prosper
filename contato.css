@@ -1,7 +1,18 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+@font-face {
+  font-family: 'Inter';
+  src: url('assets_2026/Inter-VariableFont_slnt,wght.ttf') format('truetype');
+  font-weight: 100 900;
+  font-style: normal;
+}
 
 body{
   /* font-family: 'Montserrat', sans-serif; */
+}
+
+/* --- Ajuste de Tipografia Básica --- */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Inter', sans-serif;
+  color: #000;
 }
 
 .img-contato{

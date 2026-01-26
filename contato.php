@@ -140,15 +140,25 @@ INCLUDE_ONCE './config.php';
 
     <main>
 
+    <div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-light" style="padding: 0rem!important;">
+    <picture>  
+          <source type="image/webp" srcset="./assets_2026/bg_orcamento.webp"/>
+          <img class="img-fluid img-contato" src="./assets_2026/bg_orcamento.webp" >        
+        </picture>
+
+    <div class="position-relative col-md-5 p-lg-5 mx-auto my-5">
+      <h1 class="display-4 fw-normal">Seu controle começa<br> por aqui. Preencha o formulário e faça <br> seu orçamento.</h1>
+    </div>
+    </div>
+    <div class="product-device shadow-sm d-none d-md-block"></div>
+    <div class="product-device product-device-2 shadow-sm d-none d-md-block"></div>
+  </div>
+
     <div class="row area-form" style="padding-top: 85px;">
       <div class="row">    
         <div class="col-md">
-        <h2> Seu Controle começa<br> por aqui. Preencha o formulário e faça o <br> seu orçamento. <h2>
-       <picture>  
-          <source type="image/webp" srcset="./assets_2026/bg_orcamento.webp"/>
-          <img class="img-contato" src="./assets_2026/bg_orcamento.webp">        
-        </picture>
-        </div>
+        
+       
 
      <div class="row">
      <div class="col-md-12">
