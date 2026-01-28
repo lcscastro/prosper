@@ -6,7 +6,8 @@
 }
 
 body{
-  /* font-family: 'Montserrat', sans-serif; */
+  font-family: 'Inter', sans-serif;
+  overflow-x: hidden;
 }
 
 /* --- Ajuste de Tipografia Básica --- */
@@ -33,7 +34,7 @@ h1, h2, h3, h4, h5, h6 {
   text-align: center;       /* Centraliza o texto */
   color: #818181;           /* Cor Cinza (baseado no padrão do site) */
   font-weight: 700;         /* Fonte mais leve/fina (opcional, para ficar elegante) */
-  /*padding-top: 40px;        /* Espaço superior */
+  padding-top: 40px;        /* Espaço superior */
   /*padding-bottom: 20px;     /* Espaço inferior */
   
 }
@@ -109,7 +110,7 @@ h1, h2, h3, h4, h5, h6 {
   position: absolute;
   bottom: 0;       /* Posiciona na base da imagem */
   right: 20%;       /* Alinhado à direita (simétrico ao texto da esquerda) */
-  transform: translateY(-140%); /* Empurra % da altura para baixo (efeito borda) */
+  transform: translateY(10%); /* Empurra % da altura para baixo (efeito borda) */
   z-index: 20;     /* Garante que fique acima da imagem e do fundo branco */
   
   /* Estilo visual para destaque */
@@ -211,4 +212,120 @@ h1, h2, h3, h4, h5, h6 {
     width: 80%;
   }
 }
+}
+
+/* =========================================
+   4. RESPONSIVIDADE (MEDIA QUERIES)
+   ========================================= */
+
+/* --- Telas Grandes (Notebooks 16"/18" e Monitores Full HD) --- */
+@media (min-width: 1400px) {
+  .banner-wrapper img {
+    height: 600px; /* Fixa altura para não ocupar tela toda em monitores gigantes */
+  }
+  .texto-sobreposto {
+    width: 40%; /* Reduz largura para ficar mais elegante */
+    left: 22%;
+  }
+}
+
+/* --- Tablets em Paisagem e Laptops Pequenos (iPad Pro Landscape) --- */
+@media (max-width: 1199px) {
+  .texto-sobreposto {
+    width: 55%; /* Aumenta área de texto */
+  }
+  .texto-sobreposto h1 {
+    font-size: 2.5rem;
+  }
+}
+
+/* --- Tablets em Retrato (iPad Pro Portrait) --- */
+@media (max-width: 991px) {
+  .banner-wrapper img {
+    height: 500px; /* Garante altura para a imagem de fundo */
+    object-position: 70% center; /* Foca mais na parte relevante da foto */
+  }
+  
+  .texto-sobreposto {
+    width: 70%; /* Ocupa mais espaço */
+    left: 50%;
+    transform: translate(-50%, -50%); /* Centraliza */
+    text-align: center; /* Centraliza texto */
+    background: rgba(0, 0, 0, 0.3); /* Fundo sutil para leitura */
+    padding: 20px;
+    border-radius: 10px;
+  }
+  
+  .btn-orcamento-flutuante {
+    right: 50%;
+    transform: translate(50%, 50%); /* Centraliza o botão na borda inferior */
+  }
+}
+
+/* --- Celulares (S20 Ultra, iPhone 12/14) --- */
+@media (max-width: 767px) {
+  .banner-wrapper {
+    overflow: hidden !important; /* No mobile, escondemos o overflow para layout limpo */
+    display: flex;
+    flex-direction: column;
+  }
+
+  .banner-wrapper img {
+    height: 350px;
+    min-height: auto;
+  }
+
+  /* Texto no Mobile */
+  .texto-sobreposto {
+    position: relative; /* Sai de cima da imagem */
+    width: 100%;
+    left: auto;
+    top: auto;
+    transform: none;
+    text-align: center;
+    background-color: #212529; /* Fundo escuro para o texto */
+    padding: 30px 15px;
+    margin: 0;
+  }
+
+  .texto-sobreposto h1 {
+    font-size: 1.6rem;
+    line-height: 1.3;
+  }
+
+  /* Botão no Mobile */
+  .btn-orcamento-flutuante {
+    position: relative;
+    bottom: auto;
+    right: auto;
+    transform: none;
+    width: 90%; /* Botão largo para toque fácil */
+    margin: -25px auto 20px auto; /* Puxa para cima para conectar visualmente */
+    display: block;
+    text-align: center;
+  }
+  
+  .btn-orcamento-flutuante:hover {
+    transform: none;
+  }
+
+  .area-form {
+    padding: 1rem; /* Menos padding lateral no mobile */
+  }
+  
+  .titulo-h2 {
+    font-size: 1.5rem;
+    padding-top: 10px;
+  }
+}
+
+/* --- Ajuste Fino para telas muito estreitas (Galaxy Fold fechado/iPhone Mini) --- */
+@media (max-width: 380px) {
+  .texto-sobreposto h1 {
+    font-size: 1.3rem;
+  }
+  .btn-primary, .btn-orcamento-flutuante {
+    padding: 12px 20px;
+    font-size: 0.9rem;
+  }
 }
