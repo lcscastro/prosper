@@ -233,9 +233,10 @@ h1, h2, h3, h4, h5, h6 {
 @media (max-width: 1199px) {
   .texto-sobreposto {
     width: 55%; /* Aumenta área de texto */
+    left: 25%;
   }
   .texto-sobreposto h1 {
-    font-size: 2.5rem;
+    font-size: 1.9rem;
   }
 }
 
