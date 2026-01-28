@@ -8,7 +8,7 @@
 body {
   font-family: 'Inter', sans-serif;
   font-weight: 300;
-  color: #5a5a5a;
+  color: #fff;
   /* Fundo */
   background-image: url('assets_2026/Background_tela_gestão.png'); /* Confirme se a extensão é .png ou .webp */
   background-size: cover;
@@ -135,8 +135,6 @@ h2.display-4 {
   
   /* Borda arredondada apenas no topo para dar efeito de "aba" */
   /* border-radius: 40px 40px 0 0;  */
-  
-
   margin: 0; /* Remove margens laterais */
   margin-top: auto; /* Empurra para o fundo se houver espaço */
   
@@ -145,11 +143,10 @@ h2.display-4 {
   width: 100%;
   
   /* Sombra virada para cima */
-  box-shadow: 0 -10px 50px rgba(0,0,0,0.15); 
+  box-shadow: 0 -10px 50px rgba(0,0,0,0.15);
   position: relative;
   z-index: 10;
   flex-grow: 1; /* Faz a caixa crescer para preencher espaço vazio */
-
   padding: 30px 20px 60px 20px; 
   
 }
@@ -171,6 +168,7 @@ h2.display-4 {
 
 .titulo-azul-b {
   color: #000 !important; 
+  font-weight: 500;
 }
 
 /* --- NOVO ESTILO: Botão "Área do Cliente" --- */
@@ -210,8 +208,8 @@ h2.display-4 {
 /* Ajuste do container dos ícones para dar um respiro na direita */
 .icon-box {
   margin-bottom: 10px;
-  padding: 0 15px; /* Espaçamento padrão entre ícones */
   position: relative;
+  width: 170px;
 }
 
 /* Tamanho da Imagem */
@@ -221,7 +219,6 @@ h2.display-4 {
   margin-bottom: 10px;
   transition: transform 0.3s ease;
   filter: drop-shadow(0px 4px 6px rgba(0,0,0,0.1)); /* Sombra leve no ícone para destaque */
-  
 }
 
 /* Efeito ao passar o mouse */
@@ -249,7 +246,7 @@ h2.display-4 {
     /* 2. Margem negativa para anular o padding da .conteudo-box (que é 20px ou 50px) */
     /* Isso puxa a linha de ícones para fora da margem interna da caixa branca */
     .lista-icones-direita {
-        margin-right: -40px !important; 
+        margin-right: 130px !important; 
         margin-top: -80px !important; /* Sobe os ícones para perto da borda superior */
         width: auto;
     }
@@ -262,28 +259,13 @@ h2.display-4 {
 @media (max-width: 991px) {
     .icon-box img { width: 65px; }
     .icon-label { font-size: 0.85rem; }
-    
     /* Reseta margens no mobile para não quebrar a tela */
     .lista-icones-direita { margin-right: 0 !important; }
-}
-
-/* Lista sem marcadores padrão, usando ícones manuais */
-.lista-cadastro {
-  list-style: none;
-  padding-left: 0;
-}
-.lista-cadastro li {
-  font-size: 1rem;
-  margin-bottom: 8px;
-  color: #555;
-  font-weight: 500;
-}
-
-.card-atendimento {
-  background-color: #f8f9fa;
-  border-radius: 20px;
-  padding: 25px;
-  text-align: center;
+    .hero-section { padding-top: 100px; padding-bottom: 50px; padding-left: 15px; text-align: center; }
+    .text-destaque-header, .text-sub-header { transform: translate(0,0); text-align: center; font-size: 2rem; }
+    .btn-area-cliente-destaque { transform: translate(0,0); margin-top: 20px; }
+    .conteudo-box { padding: 30px 15px; }
+    .lista-icones-direita { margin-right: 0 !important; margin-top: 0 !important; }
 }
 
 .btn-whatsapp {
@@ -298,11 +280,13 @@ h2.display-4 {
   gap: 8px;
   margin: 10px 0;
   transition: background-color 0.2s;
+  transition: transform 0.3s ease;
 }
 
 .btn-whatsapp:hover {
   background-color: #fff;
   color: white;
+  transform: scale(1.15) translateY(-5px); /* Cresce e sobe um pouco */
 }
 
 /* --- Footer --- */
@@ -343,5 +327,126 @@ h2.display-4 {
     .conteudo-box {
         padding: 40px 15px;
         border-radius: 30px 30px 0 0;
+    }
+}
+
+/* --- Card de Atendimento (Ajuste de Posição) --- */
+.card-atendimento {
+  width: 442px;
+  background-color: rgba(248, 249, 250, 0.65);
+  /* Efeito de desfoque no fundo (Estilo Frosted Glass) */
+  -webkit-backdrop-filter: blur(8px); /* Suporte para Safari */
+  border-radius: 20px;
+  padding: 30px 30px 30px 30px;
+  text-align: center; /* Centraliza conteúdo interno */
+  
+/* Borda sutil semi-transparente para combinar */
+  border: 1px solid rgba(255, 255, 255, 0.5);
+
+  /*box-shadow: 0 10px 30px rgba(0,0,0,0.05); /* Sombra suave */
+  
+  /* --- AJUSTE DE POSIÇÃO MANUAL --- */
+  position: relative; 
+  top: -350px; /* Altere este valor para subir (-) ou descer (+) a caixa */
+  right: -200px;
+  z-index: 20;
+}
+
+/* No celular, removemos o deslocamento para não quebrar o layout */
+@media (max-width: 991px) {
+  .card-atendimento {
+    top: 0;
+    margin-bottom: 30px;
+  }
+}
+
+.titulo-cinza{
+  color:#5a5a5a;
+  text-align: center;
+  /* margin-right: 320px; */
+}
+
+.texto-cadastro{
+  text-align: justify;
+}
+
+/* --- Lista Horizontal com Borda Degradê (Mais Compacta) --- */
+
+.lista-cadastro {
+    list-style: none;
+    padding: 0;
+    
+    /* Reduzi as margens externas para aproximar do texto acima e abaixo */
+    margin-top: 10px; 
+    margin-bottom: 20px;
+    
+    display: flex; 
+    flex-direction: row; 
+    
+    /* Configuração da Borda Degradê */
+    border-radius: 15px;
+    border: 3px solid transparent; 
+    
+    /* Fundo Branco Interno + Borda Degradê */
+    background-image: linear-gradient(#ffffff, #ffffff), 
+                      linear-gradient(90deg, #25246b 20%, #690a12 75%, #be1522 100%);
+    background-origin: border-box;
+    background-clip: padding-box, border-box;
+    
+    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+}
+
+.lista-cadastro li {
+    flex: 1;
+    
+    /* AQUI ESTÁ A MUDANÇA PRINCIPAL: */
+    /* Reduzi o padding para 8px (topo/baixo) para a barra ficar mais fina */
+    padding: 8px 5px; 
+    
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    font-size: 0.95rem; /* Ajuste leve na fonte se necessário */
+    color: #495057; 
+    white-space: nowrap;
+}
+
+.lista-cadastro li:last-child {
+    border-right: none;
+}
+
+.lista-cadastro li i {
+    color: #be1522; 
+    font-size: 1.2rem; /* Ícone levemente menor para acompanhar */
+    margin-right: 8px;
+}
+
+.lista-cadastro li:hover {
+    background-color: #f8f9fa;
+    cursor: default;
+}
+
+/* --- Responsividade Mobile --- */
+@media (max-width: 991px) {
+    .lista-cadastro {
+        flex-direction: column;
+        background-image: linear-gradient(#ffffff, #ffffff), 
+                          linear-gradient(180deg, #25246b 20%, #690a12 75%, #be1522 100%);
+    }
+    
+    .lista-cadastro li {
+        justify-content: flex-start;
+        padding: 12px 15px; /* No mobile mantém um pouco maior para o toque */
+        border-right: none;
+        border-bottom: 1px solid #e9ecef;
+        white-space: normal;
+    }
+    
+    .lista-cadastro li:last-child {
+        border-bottom: none;
     }
 }
