@@ -152,7 +152,7 @@ h2.display-4 {
   color: #ffffff; /* Texto branco */
   font-weight: 500;
   font-size: 1.5rem;
-  text-transform: uppercase;
+  text-transform: capitalize;
   letter-spacing: 1px;
   padding: 15px 50px; /* Espaçamento interno para dar corpo ao botão */
   border-radius: 50px; /* Borda bem arredondada (formato pílula) */
@@ -165,6 +165,16 @@ h2.display-4 {
     /* Mova os valores abaixo para ajustar a posição */
       transform: translate(-120px, 0px); /* (Horizontal, Vertical) */
       /* Exemplo: translate(-50px, 0px) move 50px para a esquerda */
+
+  color: #ffffff !important; /* !important garante que o link fique branco */
+  /* NOVAS REGRAS PARA O LINK */
+  text-decoration: none; /* Remove o sublinhado do link */
+}
+
+/* Garante que o visual se mantenha ao passar o mouse */
+.btn-area-cliente-destaque:hover {
+  background-color: #0b5ed7; /* Leve escurecimento no hover */
+  color: #ffffff !important;
 }
 
 .icon-row {
