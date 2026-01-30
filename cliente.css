@@ -450,3 +450,180 @@ h2.display-4 {
         border-bottom: none;
     }
 }
+
+/* --- Responsividade Mobile e Tablets (Abaixo de 992px) --- */
+@media (max-width: 991px) {
+    
+    /* 1. Ajuste do Card de Atendimento (CRÍTICO) */
+    /* Remove a largura fixa de 442px que quebrava telas menores que isso (S20, iPhone, Pixel) */
+    .card-atendimento {
+        width: 100%;           /* Ocupa a largura disponível */
+        max-width: 442px;      /* Não deixa ficar gigante em tablets */
+        position: relative;    /* Reseta o posicionamento absoluto/hacks do desktop */
+        top: 0;
+        right: 0;
+        left: 0;
+        margin: 0 auto 40px auto; /* Centraliza e dá espaço abaixo */
+        padding: 25px 15px;    /* Reduz um pouco o padding interno para ganhar espaço */
+    }
+
+    /* 2. Ajuste da Seção Hero (Topo) */
+    .hero-section {
+        padding-top: 110px;    /* Espaço para o menu fixo */
+        padding-bottom: 40px;
+        padding-left: 20px;    /* Margem segura lateral */
+        padding-right: 20px;
+        text-align: center;
+        min-height: auto;      /* Remove altura forçada para não gerar espaços vazios */
+    }
+    
+    /* 3. Textos do Header */
+    /* Reseta as transformações manuais (translate) que empurravam o texto para fora */
+    .text-destaque-header, 
+    .text-sub-header {
+        transform: translate(0, 0);
+        text-align: center;
+        width: 100%;
+    }
+
+    /* Ajuste fino para telas estreitas (Samsung S20 e similares) */
+    .text-destaque-header {
+        font-size: 2.2rem; /* Reduz um pouco para não quebrar palavras */
+    }
+    .text-sub-header {
+        font-size: 1.6rem;
+    }
+    
+    /* 4. Botão de Ação Principal */
+    .btn-area-cliente-destaque {
+        transform: translate(0, 0);
+        margin-top: 25px;
+        width: 100%;           /* Botão largura total facilita o toque no mobile */
+        max-width: 320px;      /* Limita para não ficar exagerado */
+        font-size: 1.2rem;
+        padding: 12px 20px;
+        display: inline-block;
+    }
+    
+    /* 5. Ícones de Funcionalidades */
+    .lista-icones-direita {
+        margin-right: 0 !important; 
+        margin-top: 0 !important;
+        display: flex;
+        flex-direction: row;      /* Mantém em linha */
+        justify-content: center;  /* Centraliza */
+        flex-wrap: wrap;          /* Permite quebrar linha se a tela for muito pequena (ex: Galaxy Z Flip) */
+        gap: 15px;
+    }
+
+    .icon-box {
+        width: auto;              /* Deixa o tamanho fluido */
+        min-width: 90px;          /* Tamanho mínimo para o toque */
+        margin-bottom: 20px;
+    }
+
+    .icon-box img { 
+        width: 60px;              /* Ícones menores para equilibrar com a tela */
+    }
+    
+    .icon-label { 
+        font-size: 0.85rem; 
+    }
+
+    /* 6. Ajuste da Caixa de Conteúdo Branca */
+    .conteudo-box {
+        padding: 40px 20px;
+        border-radius: 30px 30px 0 0;
+        margin-top: 0;
+    }
+
+    /* 7. Lista de Cadastro (Horizontal vira Vertical ou ajustada) */
+    .lista-cadastro {
+        flex-direction: column; /* Empilha os itens um abaixo do outro */
+        background-image: linear-gradient(#ffffff, #ffffff), 
+                          linear-gradient(180deg, #25246b 20%, #690a12 75%, #be1522 100%);
+    }
+    
+    .lista-cadastro li {
+        justify-content: flex-start; /* Alinha texto à esquerda */
+        padding: 15px;
+        border-right: none;
+        border-bottom: 1px solid #eee; /* Divisória sutil */
+    }
+    
+    .lista-cadastro li:last-child {
+        border-bottom: none;
+    }
+}
+
+/* --- Ajustes Específicos para Telas Muito Pequenas (ex: S20 padrão - 360px) --- */
+@media (max-width: 380px) {
+    .text-destaque-header {
+        font-size: 1.8rem;
+    }
+    
+    /* Garante que os badges das lojas (App Store/Google Play) não estourem a tela */
+    .d-flex.justify-content-center.gap-3 img {
+        width: 100% !important; /* Força a imagem a respeitar o container */
+        max-width: 180px;       /* Tamanho máximo visual */
+        height: auto;
+    }
+    
+    .d-flex.justify-content-center.gap-3 {
+        gap: 10px !important;   /* Reduz o espaço entre os botões de download */
+    }
+}
+
+/* --- Correção Específica do Header e Menu Mobile --- */
+@media (max-width: 991px) {
+    
+    /* Reduz o logo para caber na mesma linha do botão em celulares estreitos (S20, etc) */
+    #logo-menu-img {
+        max-width: 160px; 
+        height: auto;
+    }
+
+    /* Remove paddings excessivos que podem quebrar o layout */
+    .navbar {
+        padding-top: 10px !important;
+        padding-bottom: 10px !important;
+    }
+
+    /* Ajuste do Botão Sanduíche */
+    .navbar-toggler {
+        margin-left: auto; /* Garante alinhamento à direita */
+        border-color: rgba(0,0,0,0.1); /* Borda mais sutil */
+        outline: none; /* Remove contorno padrão ao clicar */
+    }
+    
+    .navbar-toggler:focus {
+        box-shadow: none; /* Remove brilho padrão do bootstrap */
+    }
+
+    /* Formatação da Lista de Menu quando aberta */
+    #navbarCollapse {
+        background-color: #f8f9fa; /* Fundo cinza claro para destacar sobre o site */
+        margin-top: 15px; /* Separa do topo */
+        padding: 20px;
+        border-radius: 15px; /* Arredonda as bordas do menu aberto */
+        box-shadow: 0 10px 30px rgba(0,0,0,0.1); /* Sombra para dar profundidade */
+        border: 1px solid rgba(0,0,0,0.05);
+    }
+
+    /* Centraliza e espaça os links para facilitar o toque */
+    .navbar-nav .nav-item {
+        text-align: center;
+        border-bottom: 1px solid #eee;
+        padding: 5px 0;
+    }
+
+    .navbar-nav .nav-item:last-child {
+        border-bottom: none;
+    }
+    
+    /* Aumenta a área de clique dos links */
+    .nav-link {
+        font-size: 1.2rem !important; /* Texto um pouco maior */
+        padding: 10px !important;
+    }
+}
