@@ -282,11 +282,12 @@ h1, h2, h3, h4, h5, h6 {
     width: 100%;
     left: auto;
     top: auto;
-    transform: none;
+    transform: translate(-2%, -105%);
     text-align: center;
-    background-color: #212529; /* Fundo escuro para o texto */
+    background-color: transparent; /* Fundo escuro para o texto */
     padding: 30px 15px;
     margin: 0;
+
   }
 
   .texto-sobreposto h1 {
@@ -331,7 +332,7 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
-* --- Responsividade Mobile e Tablets (Abaixo de 992px) --- */
+/* --- Responsividade Mobile e Tablets (Abaixo de 992px) --- */
 @media (max-width: 991px) {
 
     /* 1. Ajuste do Background (Estilo Capa) */
@@ -371,7 +372,53 @@ h1, h2, h3, h4, h5, h6 {
     }
 
     /* 3. Título e Subtítulo */
-    .
+    .text-destaque-header {
+        font-size: 2rem;
+        text-align: center;
+        color: #333; /* Escuro para ler no fundo branco/cinza */
+        margin-bottom: 10px;
+    }
+    
+    .text-sub-header {
+        font-size: 1.1rem;
+        text-align: center;
+        color: #666;
+        margin-bottom: 25px;
+    }
+
+    /* 4. Menu Mobile (Correções visuais) */
+    .navbar {
+        padding-top: 10px !important;
+        padding-bottom: 10px !important;
+    }
+
+    #logo-menu-img {
+        max-width: 160px; /* Logo menor para caber em telas estreitas (S20) */
+        height: auto;
+    }
+
+    .navbar-toggler {
+        border-color: rgba(0,0,0,0.1);
+        margin-left: auto;
+    }
+
+    #navbarCollapse {
+        background-color: #fff;
+        margin-top: 15px;
+        padding: 20px;
+        border-radius: 15px;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    }
+
+    .navbar-nav .nav-item {
+        text-align: center;
+        border-bottom: 1px solid #f0f0f0;
+        padding: 5px 0;
+    }
+    
+    .navbar-nav .nav-item:last-child {
+        border-bottom: none;
+    }
 }
 
 /* Ajuste fino para telas muito pequenas (ex: Galaxy Fold fechado ou S20 muito estreito) */
@@ -381,5 +428,42 @@ h1, h2, h3, h4, h5, h6 {
     }
     .text-destaque-header {
         font-size: 1.8rem;
+    }
+}
+
+/* --- 1. CONFIGURAÇÃO DESKTOP (Geral) --- */
+/* Localize a classe .card-orcamento fora das media queries e deixe assim: */
+.card-orcamento {
+    
+    background-color: white;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    
+    /* AQUI: Define o recuo esquerdo no Desktop */
+    margin-left: 350px; 
+    
+    /* Mantém o posicionamento relativo se necessário */
+    position: relative;
+    z-index: 10;
+}
+
+/* --- 2. CONFIGURAÇÃO MOBILE (Dispositivos Móveis) --- */
+/* Substitua ou adicione dentro do bloco @media (max-width: 991px) */
+@media (max-width: 991px) {
+    
+    .card-orcamento {
+        /* CORREÇÃO PRINCIPAL: Remove a margem esquerda do desktop */
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        
+        /* Centraliza e ajusta largura */
+        margin: 0 auto 30px auto !important; 
+        width: 100% !important;
+        max-width: 100% !important;
+        
+        /* Ajustes visuais para mobile */
+        padding: 25px 15px;
+        box-shadow: 0 5px 10px rgba(0,0,0,0.05);
     }
 }

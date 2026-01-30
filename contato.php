@@ -101,7 +101,7 @@ INCLUDE_ONCE './config.php';
     
   </head>
   <body class="bg-body-tertiary">
-    <header data-bs-theme="light" class="d-flex flex-wrap justify-content-center py-2 mb-2 border-bottom">
+    <!-- <header data-bs-theme="light" class="d-flex flex-wrap justify-content-center py-2 mb-2 border-bottom"> -->
       <nav class="navbar bg-light navbar-expand-md navbar-light fixed-top" style="padding-top: 8px; padding-bottom: 0px;">
         <div id="area-menu" class="container-fluid">
           <a id="logo-menu_a" class="navbar-brand d-flex align-items-center" href="index.html"><img id="logo-menu-img" class="img-fluid" src="img/Logo_Prosper_Site_250X150.png" alt="LogoTipo da Empresa"> </a>
@@ -109,7 +109,7 @@ INCLUDE_ONCE './config.php';
            <span class="navbar-toggler-icon"></span> 
           </button>
           <div class="menu-header collapse navbar-collapse" id="navbarCollapse">
-            <ul class="navbar-nav me-auto mb-2 mb-md-0">
+            <ul class="navbar-nav mb-2 mb-md-0 w-100 justify-content-center">
               <li class="nav-item">
                 <a class="nav-link active" aria-current="page" href="index.html" style="font-size: 20px;color: #000">Home</a>
               </li>
@@ -123,20 +123,17 @@ INCLUDE_ONCE './config.php';
                 <a class="nav-link" href="cliente.html" style="font-size: 20px;color: #000">Área do Cliente</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="contato.html" style="font-size: 20px;color: #000">Orçamento</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="https://www.instagram.com/prosperservice/" target="_blank"><i class="fi fi-brands-instagram" style="line-height: 2.2;"></i></a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="https://www.linkedin.com/company/prosperservice/" target="_blank"><i class="fi fi-brands-linkedin" style="line-height: 2.2;"></i></a>
-              </li>
+            <a class="nav-link active" href="contato.php" style="font-size: 18px;color: #000; font-weight: bold;">Orçamento</a> </li>
+          <li class="nav-item d-flex justify-content-center align-items-center gap-3 mt-2 mt-md-0 ms-md-3">
+            <a class="nav-link p-0" href="https://www.instagram.com/prosperservice/" target="_blank"><i class="fi fi-brands-instagram" style="font-size: 20px; color: #000;"></i></a>
+            <a class="nav-link p-0" href="https://www.linkedin.com/company/prosperservice/" target="_blank"><i class="fi fi-brands-linkedin" style="font-size: 20px; color: #000;"></i></a>
+          </li>
             </ul>
           </div>
         </div>
       </nav>
       
-    </header>
+    <!-- </header> -->
 
     <main>
 
@@ -166,7 +163,7 @@ INCLUDE_ONCE './config.php';
       
 
 
-      <div class="col-md-8 col-lg-6" id="kit-form" style="margin-left: 350px;"> <!-- Formulário -->
+      <div class="col-md-8 col-lg-6 card-orcamento" id="kit-form"> <!-- Formulário -->
         <h2 class="titulo-h2">Seja um cliente <span>Pros</span><span>per</span></h2>
         
         <form class="needs-validation" method="POST" id="form-contato" name="form-contato">
