@@ -62,28 +62,7 @@ h2.display-4 {
     }
 }
 
-/* Ajuste específico para telas maiores (Desktop) */
-@media (min-width: 992px) {
-  .hero-section {
-    padding-left: 60px; /* Mais espaço à esquerda em telas grandes para alinhar visualmente */
-  }
-}
 
-/* Em telas de celular (menor que 992px), o botão fica centralizado e com margem */
-@media (max-width: 991px) {
-    .btn-area-cliente-destaque {
-        margin-top: 30px; /* Separa o botão do texto em telas pequenas */
-        font-size: 1.3rem; /* Um pouco menor no mobile */
-        padding: 12px 40px;
-    }
-    
-    .hero-section {
-        padding-bottom: 40px;
-    }
-    
-    /* Centraliza o texto do header no mobile se desejar */
-    /* .text-destaque-header, .text-sub-header { text-align: center; } */ 
-}
 
 .text-destaque-header {
   font-weight: 700;
@@ -367,12 +346,20 @@ h2.display-4 {
 }
 
 .texto-cadastro{
-  text-align: justify;
+  text-align: center;
 }
 
 /* --- Lista Horizontal com Borda Degradê (Mais Compacta) --- */
 
 .lista-cadastro {
+
+    /* --- Lista Horizontal com Borda Degradê (Mais Compacta) --- */
+
+    /* ALTERAÇÃO AQUI: Centralização */
+    margin: 10px auto 20px auto; /* Topo: 10px | Laterais: Auto (Centraliza) | Baixo: 20px */
+    max-width: 800px;            /* Impede que fique larga demais no desktop */
+    width: 100%;                 /* Garante que ocupe o espaço disponível até o max-width */
+
     list-style: none;
     padding: 0;
     
@@ -439,7 +426,7 @@ h2.display-4 {
     }
     
     .lista-cadastro li {
-        justify-content: flex-start;
+        justify-content: center;
         padding: 12px 15px; /* No mobile mantém um pouco maior para o toque */
         border-right: none;
         border-bottom: 1px solid #e9ecef;
@@ -545,7 +532,7 @@ h2.display-4 {
     }
     
     .lista-cadastro li {
-        justify-content: flex-start; /* Alinha texto à esquerda */
+        justify-content: center; /* Alinha texto à esquerda */
         padding: 15px;
         border-right: none;
         border-bottom: 1px solid #eee; /* Divisória sutil */
@@ -553,5 +540,70 @@ h2.display-4 {
     
     .lista-cadastro li:last-child {
         border-bottom: none;
+    }
+}
+
+/* Ajuste específico para telas maiores (Desktop) */
+@media (min-width: 992px) {
+  .hero-section {
+    padding-left: 60px; /* Mais espaço à esquerda em telas grandes para alinhar visualmente */
+  }
+}
+
+/* Em telas de celular (menor que 992px), o botão fica centralizado e com margem */
+@media (max-width: 991px) {
+    .btn-area-cliente-destaque {
+        margin-top: 30px; /* Separa o botão do texto em telas pequenas */
+        font-size: 1.3rem; /* Um pouco menor no mobile */
+        padding: 12px 40px;
+    }
+    
+    .hero-section {
+        padding-bottom: 40px;
+    }
+    
+    /* Centraliza o texto do header no mobile se desejar */
+    /* .text-destaque-header, .text-sub-header { text-align: center; } */ 
+}
+
+/* --- Responsividade Mobile (Abaixo de 992px) --- */ 
+@media (max-width: 991px) {
+
+  /* --- Atualize este trecho dentro da @media (max-width: 991px) --- */
+
+body {
+    /* 1. Tamanho da Imagem */
+    /* 'auto 850px' fixa a altura da imagem em 850 pixels. 
+       Isso impede que ela dê "zoom" excessivo em páginas longas. 
+       A largura se ajusta automaticamente (ficará maior que a tela, permitindo mover). */
+    background-size: auto 850px !important;
+    
+    /* 2. Posição da Imagem (O "Arrastar") */
+    /* Mude o PRIMEIRO valor (50%) para mover para Esquerda/Direita */
+    /* Mude o SEGUNDO valor (0%) para mover para Baixo (ex: 20% para descer a foto) */
+    background-position: 70% 0% !important; 
+    
+    background-attachment: scroll !important; 
+    background-repeat: no-repeat !important;
+    background-color: #f5f5f5;
+}
+
+.hero-section {
+    /* Define o espaço visível da imagem antes de começar o texto */
+    /* Se achar que está mostrando muita imagem vazia, diminua para 250px ou 300px */
+    padding-top: 350px !important; 
+    
+    padding-bottom: 40px;
+    padding-left: 15px;
+    padding-right: 15px;
+    min-height: auto !important;
+    display: block;
+}
+    
+    /* ... Mantenha as outras correções (card-atendimento, lista, etc.) abaixo ... */
+    .card-atendimento {
+        width: 100%;
+        max-width: 442px;
+        /* ... */
     }
 }
