@@ -315,9 +315,10 @@ INCLUDE_ONCE './config.php';
             <li class="nav-item mb-1"><a class="nav-link p-0 rodape-texto">Vila Prudente - São Paulo/SP</a></li>
             <li class="nav-item mb-1"><a class="nav-link p-0 rodape-texto">Tel: +55 11 3214-3232</a></li>
             <li class="nav-item mb-1"><a class="nav-link p-0 rodape-texto" id="rodape-texto-mobile">Horário de atendimento - Segunda à sexta 09hr às 17h30</a></li>
+            <li class="nav-item mb-1"><a class="nav-link p-0 rodape-texto" id="rodape-texto-mobile">sac@prosperservice.com.br</a></li>
           </ul>
         </div>
-        <p class="rodape-texto-empresa" style="font-size: 14px;">&copy; PROSPER 2023 | PROSPER SP MEDIÇÃO DE AGUA E GÁS LTDA</p>
+        <p class="rodape-texto-empresa" style="font-size: 14px;">&copy; PROSPER 2023 | PROSPER SP MEDIÇÃO DE AGUA E GÁS LTDA - CNPJ: 52.875.091/0001-02</p>
         <!-- <a class="rodape-texto" href="#">Voltar ao Topo </a> -->
       </footer>
     </div>
