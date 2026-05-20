@@ -548,6 +548,12 @@ h2.display-4 {
   .hero-section {
     padding-left: 60px; /* Mais espaço à esquerda em telas grandes para alinhar visualmente */
   }
+
+}
+@media (min-width: 1300px) {
+.card-cadastro{
+  padding-right: 105px;
+  }
 }
 
 /* Em telas de celular (menor que 992px), o botão fica centralizado e com margem */
